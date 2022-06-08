@@ -1,0 +1,57 @@
+/* * {
+ border: 1px solid purple
+} */
+/*
+body {
+  display: flex;
+  flex-direction: column;
+} */
+.columns {
+  display:flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-content: center;
+  /* margin-top: auto; */
+  padding: 5px
+}
+
+p {
+  margin: 2px;
+}
+
+.title {
+  border: dotted 3pt;
+}
+
+h1 {
+  color: gray;
+  font-style: italic;
+  text-align: center;
+  margin: 2px;
+}
+
+h2 {
+  color: magenta;
+  font-style:italic;
+  font-size: 12pt;
+}
+
+.player-column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  align-self: flex-start;
+}
+
+.player-column-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+.character-column-middle{
+
+  align-self: center;
+}
