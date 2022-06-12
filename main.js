@@ -1,6 +1,7 @@
 //querySelectors
-var classicChoice = document.querySelector('.game-classic');
-var spicyChoice = document.querySelector('.game-spicy');
+var newGame = new Game();
+var classicGame = document.querySelector('.game-classic');
+var spicyGame= document.querySelector('.game-spicy');
 var gameVersionView = document.querySelector('.game-choice-container');
 var gameVersionText = document.querySelector('.choose-game-view');
 var chooseBuddyView = document.querySelector('.choose-buddy-view');
@@ -19,9 +20,13 @@ var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
 
 //eventListeners
-classicChoice.addEventListener('click', displayClassic);
-spicyChoice.addEventListener('click', displaySpicy);
-
+classicGame.addEventListener('click', displayClassic);
+spicyGame.addEventListener('click', displaySpicy);
+// rockImg.addEventListener('click', userWinsByRock);
+// paperImg.addEventListener('click', userWinsByPaper);
+// scissorsImg.addEventListener('click', userWinsByScissors);
+// alienImg.addEventListener('click', userWinsByAlien);
+// ufoImg.addEventListener('click', userWinsByUfo);
 
 //functions
 //helper functions!
@@ -44,6 +49,11 @@ function displayClassic(){
   show(classicDudeRight);
 }
 
+
+function playGame(){
+  newGame.user.playRound('classic');
+}
+
 function displaySpicy(){
   hide(gameVersionView);
   hide(gameVersionText);
@@ -57,3 +67,22 @@ function displaySpicy(){
   show(spicyTitle1);
   show(spicyTitle2);
 }
+
+
+
+//temporary reject functions
+// var rockGame = new Game();
+// if(gameVersionChosen === 'classic'){
+//   displayClassic();
+//   hide(paperImg);
+//   hide(scissorsImg);
+// } else if(gameVersionChosen === 'spicy'){
+//   displaySpicy();
+//   hide(paperImg);
+//   hide(scissorsImg);
+//   hide(alienImg);
+//   hide(ufoImg);
+// }
+//   checkForWinner();
+// }
+// return chooseBuddyText.innerText = `Nice! Rock buddy was chosen!`
