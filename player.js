@@ -1,5 +1,7 @@
 class Player {
-  constructor(win, score){
+  constructor(name, token, wins){
+    this.name = name;
+    this.token = token;
     this.wins = 0;
   }
   playRound(gameVersionChosen){
