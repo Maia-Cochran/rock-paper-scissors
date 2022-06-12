@@ -8,22 +8,6 @@
   background-image: radial-gradient(pink, blue, purple);
 } */
 
-button {
-  background-color: black;
-  color: lightgreen;
-  font-weight: bolder;
-  height: 400px;
-  width: 200px;
-  border-radius: 7px;
-  margin: 15px;
-}
-
-p {
-  margin: 2px;
-  font-size: 10pt;
-  font-weight: lighter;
-}
-
 .title {
   border: dotted 3pt;
 }
@@ -41,6 +25,7 @@ h2, h3 {
   text-align: center;
   margin-bottom: 2px;
   font-weight: bold;
+  font-size: 18pt;
 }
 
 h4 {
@@ -88,5 +73,25 @@ h4 {
 
 } */
 
-/* .game-choice-button-container{
-} */
+.game-choice-container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  background-color: black;
+  color: lightgreen;
+  font-weight: bolder;
+  height: 400px;
+  width: 250px;
+  border-radius: 7px;
+  margin: 15px;
+  font-size: 16pt;
+}
+
+p {
+  margin: 2px;
+  font-size: 8pt;
+  font-weight: lighter;
+}

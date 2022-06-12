@@ -13,11 +13,11 @@
     <section class="scissors"><h1>Scissors</h1></section>
   </section>
   <section class="title-french" hidden>
-    <section class="rock"><h1>Pierre</h1></section>
-    <section class="paper"><h1>Papier</h1></section>
-    <section class="scissors"><h1>Ciseaux</h1></section>
-    <section class="baguette"><h1>Baguette</h1></section>
-    <section class="tower"><h1>Tour de Eiffel</h1></section>
+    <section class="paint-brush"><h1>Le Pinceau</h1></section>
+    <section class="bicycle"><h1>Le Vélo</h1></section>
+    <section class="artist"><h1>L'artiste</h1></section>
+    <section class="baguette"><h1>La Baguette</h1></section>
+    <section class="tower"><h1>La tour Eiffel</h1></section>
   </section>
 <section class="columns">
   <section class="player-column-left">
@@ -28,8 +28,18 @@
   <section class="middle-column-choose-game-view">
     <section class="choose-game-level-text"><h2>Choose a game!</h2></section>
       <section class="game-choice-container">
-        <button class="game-classic"> 🪨 📜 Classic ✂️</button>
-        <button class="game-spicy"> 🥖 En français! 🇫🇷 </button>
+        <button class="game-classic"> 🪨 📜 Classic ✂️
+          <p>rock > scissors</p>
+          <p>scissors > paper</p>
+          <p>paper > rock</p>
+        </button>
+        <button class="game-spicy"> 🥖 En français! 🇫🇷
+          <p>le pinceau > l'artiste & la tour Eiffel</p>
+          <p>le vélo > le pinceau & l'artiste </p>
+          <p>l'artiste > le vélo & la baguette</p>
+          <p>la baguette > le pinceau & la tour Eiffel</p>
+          <p>la tour Eiffel > le vélo & la baguette</p>
+        </button>
       </section>
   </section>
   <section class="middle-column-choose-buddy-view" hidden>
