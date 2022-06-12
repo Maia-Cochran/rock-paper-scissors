@@ -8,16 +8,16 @@
   </head>
   <body>
     <section class="title">
-      <section class="rock"><h1>Rock</h1></section>
-      <section class="paper"><h1>Paper</h1></section>
-      <section class="scissors"><h1>Scissors</h1></section>
-      <section class="alien" id="spicy-dudes" hidden><h1>Alien</h1></section>
-      <section class="ufo" id="spicy-dudes" hidden><h1>UFO</h1></section>
+      <section class="rock"><h1>🪨  Rock 🪨</h1></section>
+      <section class="paper"><h1>📜 Paper 📜 </h1></section>
+      <section class="scissors"><h1>✂️ Scissors ✂️</h1></section>
+      <section class="spicy-title1 hidden"><h1>👽 Alien 👽 </h1></section>
+      <section class="spicy-title2 hidden"><h1>🛸 UFO 🛸 </h1></section>
     </section>
     <section class="columns">
       <section class="player-column-left">
-        <section class="classic-dude" id="classic-dudes" hidden><h3> 🤠 </h3><h4>Wins:</h4></section>
-        <section class="astronaut-dude" id="spicy-dudes" hidden><h3> 👩🏽‍🚀 </h3><h4>Wins:</h4></section>
+        <section class="classic-score-left hidden"><h3> 🤠 </h3><h4>Wins:</h4></section>
+        <section class="spicy-score-left hidden"><h3> 👩🏽‍🚀 </h3><h4>Wins:</h4></section>
         <section class="user-win-count"></section>
       </section>
     <section class="choose-game-view">
@@ -37,19 +37,21 @@
           </button>
         </section>
       </section>
-      <section class="choose-buddy-view" hidden>
-        <section class="choose-buddy-text"><h2>Choose your buddy!</h2></section>
+      <section class="choose-buddy-view hidden">
+        <section class="choose-buddy-text hidden"><h2>Choose your buddy!</h2></section>
         <section class="buddies-container">
-          <img class="classic-buddy1" id="classic-dudes" src="./assets/happy-rocks.png" alt="rock">
-          <img class="classic-buddy2" id="classic-dudes" src="./assets/happy-paper.png" alt="paper">
-          <img class="classic-buddy3" id="classic-dudes" src="./assets/happy-scissors.png" alt="scissors">
-          <img class="spicy-buddy1" id="spicy-dudes" hidden src="./assets/happy-alien.png" alt="alien">
-          <img class="spicy-buddy2" id="spicy-dudes" hidden src="./assets/ufo.png" alt="ufo">
+          <!-- <section> -->
+            <img class="classic-buddy1" src="./assets/happy-rocks.png" alt="rock">
+            <img class="classic-buddy2" src="./assets/happy-paper.png" alt="paper">
+            <img class="classic-buddy3" src="./assets/happy-scissors.png" alt="scissors">
+            <img class="spicy-buddy1 hidden" src="./assets/happy-alien.png" alt="alien">
+            <img class="spicy-buddy2 hidden" src="./assets/ufo.png" alt="ufo">
+          <!-- </section> -->
         </section>
       </section>
       <section class="player-column-right">
-        <section class="computer-dude" id="classic-dudes" hidden><h3> 💻 </h3><h4>Wins:</h4></section>
-        <section class="alien-dude" id="spicy-dudes" hidden><h3> 👾 </h3><h4>Wins:</h4></section>
+        <section class="classic-score-right hidden"><h3> 💻 </h3><h4>Wins:</h4></section>
+        <section class="spicy-score-right hidden"><h3> 👾 </h3><h4>Wins:</h4></section>
         <section class="computer-win-count"></section>
       </section>
     </section>
