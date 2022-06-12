@@ -3,13 +3,14 @@ class Game {
     this.id = Date.now();
     this.user = new Player ("user", 🤠 ) ;
     this.computer = new Player ("computer", 💻 );
-    this.gameVersionChosen;
-    this.userBuddyChosen;
-    this.computerBuddyChosen;
-    this.
+    this.gameVersionChosen = 'classic' || 'spicy';
+    this.userBuddyChoices = ['rock', 'paper', 'scissors'];
+    this.computerBuddyChoices = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
+    this.winner = true;
+  }
+  checkForWinner(userChoice, gameVersion){
 
   }
-
 }
 
 
