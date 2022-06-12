@@ -1,8 +1,12 @@
 class Game {
-  constructor(playerMe, playerComputer){
+  constructor(user, computer){
     this.id = Date.now();
-    this.playerMe = playerMe;
-    this.playerComputer = playerComputer;
+    this.user = new Player ("user", 🤠 ) ;
+    this.computer = new Player ("computer", 💻 );
+    this.gameVersionChosen;
+    this.userBuddyChosen;
+    this.computerBuddyChosen;
+    this.
 
   }
 
@@ -15,3 +19,6 @@ class Game {
 //one for computer choice
 //different for each round played
 //needs to determine the game type first
+
+//should have variables for choices selected
+//will randomize the arrays given from player class

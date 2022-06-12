@@ -1,6 +1,7 @@
 * {
   font-family: "Tahoma";
   font-weight: lighter;
+  border: solid magenta 3px;
 }
 
 body {
