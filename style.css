@@ -1,57 +1,113 @@
-/* * {
- border: 1px solid purple
-} */
-/*
+* {
+  /* border: 1px solid purple; */
+  font-family: "Tahoma";
+  font-weight: lighter;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-} */
+  background-image: radial-gradient(pink, blue, purple);
+}
+
+.title {
+  border: dotted 3pt lightyellow;
+}
+
+h1 {
+  /* color: white; */
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 100%;
+}
+
+.paper {
+  margin-left: 20%;
+}
+
+.scissors {
+  margin-left: 40%;
+}
+
+.alien {
+  margin-left: 67%;
+}
+
+.ufo {
+  text-align: right;
+  margin-right: 2%;
+}
+
 .columns {
   display:flex;
-  /* flex-direction: column; */
   justify-content: space-around;
   align-content: center;
-  /* margin-top: auto; */
-  padding: 5px
+}
+
+.player-column-left {
+  padding: 40px;
+  font-size: 12pt;
+  margin-bottom: 2px;
+}
+
+.player-column-right {
+  padding: 40px;
+  font-size: 12pt;
+}
+
+.user-win-count, .computer-win-count {
+  margin-top: 2px;
+  height: 20px;
+  width: 20px;
+}
+
+.game-choice-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  background-color: black;
+  color: lightgreen;
+  border: 3pt dotted lightyellow;
+  font-weight: bolder;
+  height: 400px;
+  width: 250px;
+  border-radius: 7px;
+  margin: 15px;
+  font-size: 16pt;
 }
 
 p {
   margin: 2px;
+  font-size: 8pt;
+  font-weight: lighter;
 }
 
-.title {
-  border: dotted 3pt;
-}
-
-h1 {
-  color: gray;
-  font-style: italic;
-  text-align: center;
-  margin: 2px;
-}
-
-h2 {
-  color: magenta;
-  font-style:italic;
-  font-size: 12pt;
-}
-
-.player-column-left {
+.buddies-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: stretch;
-  align-self: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
 
-.player-column-right{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-end;
-}
-
-.character-column-middle{
-
-  align-self: center;
+img {
+  height: 20%;
+  width: 20%;
+  margin: 18px;
+  margin-top: 10px;
 }
