@@ -8,6 +8,15 @@
   background-image: radial-gradient(pink, blue, purple);
 } */
 
+button {
+  background-color: black;
+  color: lightgreen;
+  font-weight: bolder;
+  height: 400px;
+  width: 200px;
+  border-radius: 7px;
+  margin: 15px;
+}
 
 p {
   margin: 2px;
@@ -24,12 +33,14 @@ h1 {
   margin: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 69pt;
+  font-size: 40pt;
+  font-weight: bold;
 }
 
 h2, h3 {
   text-align: center;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 h4 {
@@ -52,14 +63,14 @@ h4 {
 }
 
 .player-column-left {
-  align-self: flex-start;
-  padding: 20px;
+  /* align-self: flex-start; */
+  padding: 40px;
   font-size: 12pt;
 }
 
 .player-column-right{
-  align-self: flex-end;
-  padding: 20px;
+  /* align-self: flex-end; */
+  padding: 40px;
   font-size: 12pt;
 }
 
