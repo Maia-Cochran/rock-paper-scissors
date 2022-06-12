@@ -1,22 +1,18 @@
-/* * {
- border: 1px solid purple
-} */
-/*
-body {
-  display: flex;
-  flex-direction: column;
-} */
-.columns {
-  display:flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
-  align-content: center;
-  /* margin-top: auto; */
-  padding: 5px
+* {
+ border: 1px solid purple;
+  font-family: "Tahoma";
+  font-weight: lighter;
 }
+
+/* body {
+  background-image: radial-gradient(pink, blue, purple);
+} */
+
 
 p {
   margin: 2px;
+  font-size: 10pt;
+  font-weight: lighter;
 }
 
 .title {
@@ -24,34 +20,56 @@ p {
 }
 
 h1 {
-  color: gray;
-  font-style: italic;
-  text-align: center;
-  margin: 2px;
+  /* color: white; */
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 69pt;
 }
 
-h2 {
-  color: magenta;
-  font-style:italic;
-  font-size: 12pt;
+h2, h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin-top: 1px;
+}
+
+.paper{
+  text-align: center;
+}
+
+.scissors{
+  text-align: right;
+}
+
+.columns {
+  display:flex;
+  justify-content: space-around;
+  align-content: center;
+  /* padding: 20px */
 }
 
 .player-column-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: stretch;
   align-self: flex-start;
+  padding: 20px;
+  font-size: 12pt;
 }
 
 .player-column-right{
-  display: flex;
-  flex-direction: column;
+  align-self: flex-end;
+  padding: 20px;
+  font-size: 12pt;
+}
+
+/* .choose-game-level-text {
   justify-content: center;
-  align-content: flex-end;
 }
 
-.character-column-middle{
+.middle-column-choose-buddy-view {
 
-  align-self: center;
-}
+} */
+
+/* .game-choice-button-container{
+} */

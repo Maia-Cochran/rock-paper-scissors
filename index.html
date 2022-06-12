@@ -4,27 +4,32 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset ="UTF-8">
+  <meta charset="UTF-8">
 </head>
 <body>
   <section class="title">
-  <h1><p>Rock</p><p>Paper</p><p>Scissors</p></h1>
+    <section class="rock"><h1>Rock</h1></section>
+    <section class="paper"><h1>Paper</h1></section>
+    <section class="scissors"><h1>Scissors</h1></section>
   </section>
 <section class="columns">
   <section class="player-column-left">
-  <!-- style="background-color:#aaa;"> -->
-    <h2>Player1</h2>
-    <p>Score:</p>
+    <h3> 🤠 </h3>
+    <h4>Wins:</h4>
   </section>
-  <section class="character-column-middle">
-  <!-- style="background-color:#bbb;"> -->
-    <h2>Choose your buddy!</h2>
-    <p>Some text..</p>
+  <section class="middle-column-choose-game-view">
+    <section class="choose-game-level-text"><h2>Choose a game!</h2></section>
+      <section class="game-choice-container">
+        <button class="game-classic"> 🪨 📜 ✄ Classic</button>
+        <button class="game-spicy">Spicay</button>
+      </section>
+  </section>
+  <section class="middle-column-choose-buddy-view" hidden>
+      <section class="choose-buddy-text" hidden>Choose your buddy!</section>
   </section>
   <section class="player-column-right">
-     <!-- style="background-color:#ccc;"> -->
-    <h2>Computer</h2>
-    <p>Score:</p>
+    <h3> 💻 </h3>
+    <h4>Wins:</h4>
   </section>
 </section>
 </body>
