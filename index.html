@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-</head>
-<body>
-  <section class="title">
-    <section class="rock"><h1>Rock</h1></section>
-    <section class="paper"><h1>Paper</h1></section>
-    <section class="scissors"><h1>Scissors</h1></section>
-  </section>
-  <section class="spicy-title" hidden>
-    <section class="alien"><h1>Alien</h1></section>
-    <section class="ufo"><h1>UFO</h1></section>
-  </section>
-<section class="columns">
-  <section class="player-column-left">
-    <h3> 🤠 </h3>
-    <h4>Wins:</h4>
-    <section class="user-win-count"></section>
-  </section>
-  <section class="choose-game-view">
-    <section class="choose-game-level-text"><h2>Choose a game!</h2></section>
-      <section class="game-choice-container">
-        <button class="game-classic"> 🪨 📜 Classic ✂️
-          <p>rock > scissors</p>
-          <p>paper > rock</p>
-          <p>scissors > paper</p>
-        </button>
-        <button class="game-spicy"> 💫 Space Mode 🪐
-          <p>rock > scissors & alien</p>
-          <p>paper > rock & UFO</p>
-          <p>scissors > paper & alien</p>
-          <p>alien > paper & UFO</p>
-          <p>UFO > scissors & rock</p>
-        </button>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <section class="title">
+      <section class="rock"><h1>Rock</h1></section>
+      <section class="paper"><h1>Paper</h1></section>
+      <section class="scissors"><h1>Scissors</h1></section>
+      <section class="alien"><h1>Alien</h1></section>
+      <section class="ufo"><h1>UFO</h1></section>
+    </section>
+    <section class="columns">
+      <section class="player-column-left">
+        <section class="classic-dude" hidden><h3> 🤠 </h3><h4>Wins:</h4></section>
+        <section class="astronaut-dude" hidden><h3> 👩🏽‍🚀 </h3><h4>Wins:</h4></section>
+        <section class="user-win-count"></section>
       </section>
-  </section>
-  <section class="choose-buddy-view" hidden>
-      <section class="choose-buddy-text" hidden>Choose your buddy!</section>
-      <section class="buddies-container" hidden>
-      <img src="happy-rocks.png" alt="rock">
-      <img src="happy-paper.png" alt="paper">
-      <img src="happy-scissors.png" alt="scissors">
-      <img src="happy-alien.png" alt="alien">
-      <img src="ufo.png" alt="ufo">
+    <section class="choose-game-view">
+      <section class="choose-game-level-text"><h2>Choose a game!</h2></section>
+        <section class="game-choice-container">
+          <button class="game-classic"> 🪨 📜 Classic ✂️
+            <p>rock > scissors</p>
+            <p>paper > rock</p>
+            <p>scissors > paper</p>
+          </button>
+          <button class="game-spicy"> 💫 Space Mode 🪐
+            <p>rock > scissors & alien</p>
+            <p>paper > rock & UFO</p>
+            <p>scissors > paper & alien</p>
+            <p>alien > paper & UFO</p>
+            <p>UFO > scissors & rock</p>
+          </button>
+        </section>
       </section>
-  </section>
-  <section class="player-column-right">
-    <h3> 💻 </h3>
-    <h4>Wins:</h4>
-    <section class="computer-win-count"></section>
-  </section>
-</section>
-</body>
+      <section class="choose-buddy-view" hidden>
+        <section class="choose-buddy-text"><h2>Choose your buddy!</h2></section>
+        <section class="buddies-container">
+          <img src="./assets/happy-rocks.png" alt="rock">
+          <img src="./assets/happy-paper.png" alt="paper">
+          <img src="./assets/happy-scissors.png" alt="scissors">
+          <img src="./assets/happy-alien.png" alt="alien" hidden>
+          <img src="./assets/ufo.png" alt="ufo" hidden>
+        </section>
+      </section>
+      <section class="player-column-right">
+        <section class="computer-dude" hidden><h3> 💻 </h3><h4>Wins:</h4></section>
+        <section class="alien-dude" hidden><h3> 👾 </h3><h4>Wins:</h4></section>
+        <section class="computer-win-count"></section>
+      </section>
+    </section>
+    <script src="./main.js"></script>
+    <script src="./assets"></script>
+  </body>
 </html>
