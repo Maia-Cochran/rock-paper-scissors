@@ -110,3 +110,7 @@ img {
   margin: 18px;
   margin-top: 10px;
 }
+
+.hidden {
+  display: none;
+}

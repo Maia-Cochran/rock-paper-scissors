@@ -1,8 +1,8 @@
 class Game {
   constructor(user, computer){
     this.id = Date.now();
-    this.user = new Player ("user", 🤠 ) ;
-    this.computer = new Player ("computer", 💻 );
+    this.user = new Player ("user", "🤠") ;
+    this.computer = new Player ("computer", "💻 ");
     this.gameVersionChosen = 'classic' || 'spicy';
     this.classicBuddyChoices = ['rock', 'paper', 'scissors'];
     this.spicyBuddyChoices = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
