@@ -1,10 +1,21 @@
 class Player {
   constructor(win, score){
-    this.win = win;
+    this.wins = 0;
+  }
+  playRound(gameVersionChosen){
+    if (gameVersionChosen === 'classic'){
+      var buddies = ['rock', 'paper', 'scissors'];
+      return buddies = [Math.floor(Math.random() * buddies.length)];
+    }
+    if (gameVersionChosen === 'spicy'){
+      var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
+      return buddies = [Math.floor(Math.random() * buddies.length)];
+    }
+  }
+  winCount(){
+    this.wins++;
   }
 }
-
-
 
 //create an array, housing the buddy options
 //need a randomizer method to generate the computer's response
