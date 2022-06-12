@@ -1,5 +1,4 @@
 * {
-  /* border: 1px solid purple; */
   font-family: "Tahoma";
   font-weight: lighter;
 }
@@ -13,7 +12,6 @@ body {
 }
 
 h1 {
-  /* color: white; */
   margin: 5px;
   margin-left: 10px;
   margin-right: 10px;
