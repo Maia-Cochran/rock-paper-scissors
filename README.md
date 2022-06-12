@@ -25,7 +25,7 @@ A user will have the choice of a classic rock, paper, scissors game, or the spic
 <!-- ##Deployed Page
 Vist the webpage here. -->
 ### Sources
-MDN
-W3SCHOOLS
-Turing Front End Lessons
+- MDN
+- W3SCHOOLS
+- Turing Front End Lessons
 
