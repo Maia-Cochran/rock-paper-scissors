@@ -24,6 +24,12 @@ var spicyTitle2 = document.querySelector('.spicy-title2');
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
 rock.addEventListener('click', playRound);
+paper.addEventListener('click', playRound);
+scissors.addEventListener('click', playRound);
+alien.addEventListener('click', playRound);
+ufo.addEventListener('click', playRound);
+
+
 
 // paperImg.addEventListener('click', userWinsByPaper);
 // scissorsImg.addEventListener('click', userWinsByScissors);
@@ -68,13 +74,13 @@ function displaySpicy(){
 }
 
 //functions for choice-making
-function playRound(henlo){
+function playRound(rock){
   // newGame.startGame('classic');
-  console.log('henlo')
-  // if (newGame.gameVersionChosen === 'classic'){
-  //   newGame.computer.playRoundClassic();
-  // }
-  // newGame.checkForWinner();
+  // console.log('henlo')
+  if (newGame.gameVersionChosen === 'classic'){
+    newGame.computer.playRoundClassic();
+  }
+  return newGame.checkForWinner();
 }
 
   // if (gameVersionChosen === 'spicy'){

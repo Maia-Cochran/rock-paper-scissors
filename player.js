@@ -1,21 +1,21 @@
 class Player {
-  constructor(name, emoji){
+  constructor(name, token){
     this.name = name;
-    this.emoji = emoji;
+    this.token = token;
     this.wins = 0;
     this.choice = '';
   }
-  playRoundClassic(buddyChoiceClicked){
+  playRoundClassic(){
     var buddies = ['rock', 'paper', 'scissors'];
     var buddyRandomClassic = [Math.floor(Math.random() * buddies.length)];
     return buddies[buddyRandomClassic];
   }
-  playRoundSpicy (buddyChoiceClicked){
+  playRoundSpicy (){
     var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
     var buddyRandomSpicy = [Math.floor(Math.random() * buddies.length)];
-    return buddyChoiceClicked ||  buddies[buddyRandomSpicy];
+    return buddies[buddyRandomSpicy];
     }
   winCount(){
-    this.wins += 1;
+    this.wins++;
   }
 }
