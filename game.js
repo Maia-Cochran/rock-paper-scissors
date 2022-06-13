@@ -4,26 +4,31 @@ class Game {
     this.user = new Player ("user", "🤠") ;
     this.computer = new Player ("computer", "💻 ");
     this.gameVersionChosen = '';
-    this.winner = '';
+    this.winnerName = '';
+    this.isWinning = true;
+    this.userChoice = '';
+    // this.computerChoice = this.computer.playRoundClassic;
   }
     checkForWinner(){
-      if (this.user.choice === this.computer.choice){
+      if (this.userChoice === this.computer.choice){
         this.winner = 'tie';
       } else if(this.user.choice === 'rock' && this.computer.choice === 'alien' ||
-      this.user.choice === 'rock' && this.computer.choice === 'scissors'||
-      this.user.choice === 'paper' && this.computer.choice === 'rock' ||
-      this.user.choice === 'paper' && this.computer.choice === 'ufo' ||
-      this.user.choice === 'scissors' && this.computer.choice === 'paper'||
-      this.user.choice === 'scissors' && this.computer.choice === 'alien'  ||
-      this.user.choice === 'alien' && this.computer.choice === 'paper' ||
-      this.user.choice === 'alien' && this.computer.choice === 'ufo'||
-      this.user.choice === 'ufo' && this.computer.choice === 'scissors' ||
-      this.user.choice === 'ufo' && this.computer.choice === 'rock'
+      this.userChoice === 'rock' && this.computer.choice === 'scissors'||
+      this.userChoice === 'paper' && this.computer.choice === 'rock' ||
+      this.userChoice === 'paper' && this.computer.choice === 'ufo' ||
+      this.userChoice === 'scissors' && this.computer.choice === 'paper'||
+      this.userChoice === 'scissors' && this.computer.choice === 'alien'  ||
+      this.userChoice === 'alien' && this.computer.choice === 'paper' ||
+      this.userChoice === 'alien' && this.computer.choice === 'ufo'||
+      this.userChoice === 'ufo' && this.computer.choice === 'scissors' ||
+      this.userChoice === 'ufo' && this.computer.choice === 'rock'
       ){
         this.user.winCount();
+        this.isWinning = true;
         this.winner = 'user'
       } else {
         this.computer.winCount();
+        this.isWinning = false
         this.winner = 'computer';
       }
       if (this.winner = 'user'){

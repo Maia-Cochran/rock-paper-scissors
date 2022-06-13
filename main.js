@@ -68,15 +68,12 @@ function displaySpicy(){
 }
 
 //functions for choice-making
-newGame.computer.choice = newGame.computer.playRoundClassic();
-newGame.user.choice = 'rock';
 function playRound(){
-  newGame.startGame
-  if (newGame.gameVersionChosen === classicGame){
-    newGame.computer.playRoundClassic(rock);
-    newGame.checkForWinner();
+  newGame.startGame('classic');
+  if (newGame.gameVersionChosen === 'classic' && newGame.userChoice === 'rock'){
+    newGame.computer.playRoundClassic();
   }
-  console.log(playRound())
+  newGame.checkForWinner();
 }
 
   // if (gameVersionChosen === 'spicy'){
