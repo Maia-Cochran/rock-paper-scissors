@@ -1,7 +1,7 @@
 class Player {
-  constructor(name, token){
+  constructor(name, emoji){
     this.name = name;
-    this.token = token;
+    this.emoji = emoji;
     this.wins = 0;
     this.choice = '';
   }
@@ -16,6 +16,6 @@ class Player {
     }
   }
   winCount(){
-    this.wins++;
+    this.wins += 1;
   }
 }
