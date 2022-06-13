@@ -6,40 +6,48 @@ class Game {
     this.gameVersionChosen = 'classic' || 'spicy';
     this.classicBuddyChoices = ['rock', 'paper', 'scissors'];
     this.spicyBuddyChoices = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-    this.userWinner = true;
+    this.userWinner = true || false;
+    // this.userChoice = '';
+    // this.generatedChoice = '';
   }
-  checkForWinner(userChoice, generatedChoice){
-    if(userChoice === generatedChoice){
-      return `Great minds think alike! It's a tie 🤪 `
-    } else if(userChoice === 'rock' && generatedChoice === 'paper' || generatedChoice === 'UFO'){
+  checkForWinner(){
+      // if(userChoice === generatedChoice){
+      // this.user.wins = 0;
+      // this.computer.wins = 0;
+      // return `Great minds think alike! It's a tie 🤪 `
+    // }
+    if(this.user.choice === 'rock' && this.computer.choice === 'paper' || this.computer.choice === 'UFO'){
       this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'rock' && generatedChoice === 'scissors' || generatedChoice === 'alien'){
+      return this.userWinner = false;
+    } else if(this.user.choice  === 'rock' && this.computer.choice === 'scissors' || this.computer.choice === 'alien'){
       this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'paper' && generatedChoice === 'scissors' || generatedChoice === 'alien'){
+      return this.userWinner = true;
+    } else if(this.user.choice === 'paper' && this.computer.choice === 'scissors' || this.computer.choice === 'alien'){
       this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'paper' && generatedChoice === 'rock' || generatedChoice === 'UFO'){
+      return this.userWinner = false;
+    } else if(this.user.choice === 'paper' && this.computer.choice === 'rock' || this.computer.choice === 'UFO'){
       this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'scissors' && generateChoice === 'paper' || generatedChoice === 'alien'){
+      return this.userWinner = true;
+    } else if(this.user.choice === 'scissors' && this.computer.choice === 'paper' || this.computer.choice === 'alien'){
       this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'scissors' && generatedChoice === 'rock' || generatedChoice === 'UFO'){
+      return this.userWinner = true;
+    } else if(this.user.choice === 'scissors' && this.computer.choice === 'rock' || this.computer.choice === 'UFO'){
       this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'alien' && generatedChoice === 'rock' || generatedChoice === 'scissors'){
+      return this.userWinner = false;
+    } else if(this.user.choice === 'alien' && this.computer.choice === 'rock' || this.computer.choice === 'scissors'){
       this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'alien' && generatedChoice === 'paper' || generatedChoice === 'UFO'){
+      return this.userWinner = false;
+    } else if(this.user.choice === 'alien' && this.computer.choice === 'paper' || this.computer.choice === 'UFO'){
       this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'UFO' && generatedChoice === 'scissors' || generatedChoice === 'rock'){
+      return this.userWinner = true;
+    } else if(this.user.choice === 'UFO' && this.computer.choice === 'scissors' || this.computer.choice === 'rock'){
       this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'UFO' && generatedChoice === 'alien' || generatedChoice === 'paper')
-    this.computer.winCount();
-    this.userWinner = false;
+      return this.userWinner = true;
+      // return `🎉 You win! 🎉 `
+    } else if(this.user.choice === 'UFO' && this.computer.choice === 'alien' || this.computer.choice === 'paper'){
+      this.computer.winCount();
+      return this.userWinner = false;
+      // return `🥺  You lose! 🥺 `
+    }
   }
 }

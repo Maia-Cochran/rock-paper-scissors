@@ -1,11 +1,11 @@
 * {
   font-family: "Tahoma";
   font-weight: lighter;
-  border: solid magenta 3px;
+  /* border: solid magenta 3px; */
 }
 
 body {
-  background-image: radial-gradient(pink, blue, purple);
+  background-image: radial-gradient(lightgreen, blue, purple);
 }
 
 .title {
@@ -124,6 +124,8 @@ img {
   margin: 18px;
   margin-top: 10px;
   padding: 5px;
+  border: dotted lightpink 2px;
+  border-radius: 6px;
 }
 
 .hidden {

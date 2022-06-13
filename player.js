@@ -3,6 +3,7 @@ class Player {
     this.name = name;
     this.token = token;
     this.wins = 0;
+    this.choice = '';
   }
   playRound(gameVersionChosen){
     if (gameVersionChosen === 'classic'){
