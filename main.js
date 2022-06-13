@@ -49,7 +49,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  newGame.startGame(classicGame);
+  newGame.startGame();
 }
 
 function displaySpicy(){
@@ -64,16 +64,17 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  newGame.startGame(spicyGame);
+  newGame.startGame();
 }
 
 //functions for choice-making
-function playRound(){
-  newGame.startGame('classic');
-  if (newGame.gameVersionChosen === 'classic' && newGame.userChoice === 'rock'){
-    newGame.computer.playRoundClassic();
-  }
-  newGame.checkForWinner();
+function playRound(henlo){
+  // newGame.startGame('classic');
+  console.log('henlo')
+  // if (newGame.gameVersionChosen === 'classic'){
+  //   newGame.computer.playRoundClassic();
+  // }
+  // newGame.checkForWinner();
 }
 
   // if (gameVersionChosen === 'spicy'){

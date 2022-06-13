@@ -6,22 +6,22 @@ class Game {
     this.gameVersionChosen = '';
     this.winnerName = '';
     this.isWinning = true;
-    this.userChoice = '';
+    // this.userChoice = '';
     // this.computerChoice = this.computer.playRoundClassic;
   }
     checkForWinner(){
-      if (this.userChoice === this.computer.choice){
+      if (this.user.choice === this.computer.choice){
         this.winner = 'tie';
       } else if(this.user.choice === 'rock' && this.computer.choice === 'alien' ||
-      this.userChoice === 'rock' && this.computer.choice === 'scissors'||
-      this.userChoice === 'paper' && this.computer.choice === 'rock' ||
-      this.userChoice === 'paper' && this.computer.choice === 'ufo' ||
-      this.userChoice === 'scissors' && this.computer.choice === 'paper'||
-      this.userChoice === 'scissors' && this.computer.choice === 'alien'  ||
-      this.userChoice === 'alien' && this.computer.choice === 'paper' ||
-      this.userChoice === 'alien' && this.computer.choice === 'ufo'||
-      this.userChoice === 'ufo' && this.computer.choice === 'scissors' ||
-      this.userChoice === 'ufo' && this.computer.choice === 'rock'
+      this.user.choice === 'rock' && this.computer.choice === 'scissors'||
+      this.user.choice === 'paper' && this.computer.choice === 'rock' ||
+      this.user.choice === 'paper' && this.computer.choice === 'ufo' ||
+      this.user.choice === 'scissors' && this.computer.choice === 'paper'||
+      this.user.choice === 'scissors' && this.computer.choice === 'alien'  ||
+      this.user.choice === 'alien' && this.computer.choice === 'paper' ||
+      this.user.choice === 'alien' && this.computer.choice === 'ufo'||
+      this.user.choice === 'ufo' && this.computer.choice === 'scissors' ||
+      this.user.choice === 'ufo' && this.computer.choice === 'rock'
       ){
         this.user.winCount();
         this.isWinning = true;
