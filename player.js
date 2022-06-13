@@ -5,16 +5,16 @@ class Player {
     this.wins = 0;
     this.choice = '';
   }
-  playRound(gameVersionChosen){
-    if (gameVersionChosen === 'classic'){
-      var buddies = ['rock', 'paper', 'scissors'];
-      return buddies = [Math.floor(Math.random() * buddies.length)];
-    }
-    if (gameVersionChosen === 'spicy'){
-      var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-      return buddies = [Math.floor(Math.random() * buddies.length)];
-    }
+  playRoundClassic(){
+    var buddies = ['rock', 'paper', 'scissors'];
+    var buddyRandomClassic = (Math.floor(Math.random() * buddies.length));
+    return buddies[buddyRandomClassic];
   }
+  playRoundSpicy (buddyChoiceClicked){
+    var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
+    var buddyRandomSpicy = [Math.floor(Math.random() * buddies.length)];
+    return buddyChoiceClicked ||  buddies[buddyRandomSpicy];
+    }
   winCount(){
     this.wins += 1;
   }

@@ -7,11 +7,11 @@ var gameVersionText = document.querySelector('.choose-game-view');
 var chooseBuddyView = document.querySelector('.choose-buddy-view');
 var chooseBuddyText = document.querySelector('.choose-buddy-text');
 var buddiesContainer = document.querySelector('.buddies-container')
-var alienImg = document.querySelector('.spicy-buddy1');
-var ufoImg = document.querySelector('.spicy-buddy2');
-var rockImg = document.querySelector('.classic-buddy1');
-var paperImg = document.querySelector('.classic-buddy2');
-var scissorsImg = document.querySelector('.classic-buddy3');
+var alien = document.querySelector('.alien-buddy');
+var ufo = document.querySelector('.ufo-buddy');
+var rock = document.querySelector('.rock-buddy');
+var paper = document.querySelector('.paper-buddy');
+var scissors = document.querySelector('.scissors-buddy');
 var spicyDudeLeft = document.querySelector('.spicy-score-left');
 var spicyDudeRight = document.querySelector('.spicy-score-right');
 var classicDudeLeft = document.querySelector('.classic-score-left');
@@ -19,10 +19,12 @@ var classicDudeRight = document.querySelector('.classic-score-right');
 var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
 
+
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
-// rockImg.addEventListener('click', userWinsByRock);
+rock.addEventListener('click', playRound);
+
 // paperImg.addEventListener('click', userWinsByPaper);
 // scissorsImg.addEventListener('click', userWinsByScissors);
 // alienImg.addEventListener('click', userWinsByAlien);
@@ -47,11 +49,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-}
-
-
-function playGame(){
-  newGame.user.playRound('classic');
+  newGame.startGame(classicGame);
 }
 
 function displaySpicy(){
@@ -62,11 +60,29 @@ function displaySpicy(){
   show(buddiesContainer);
   show(spicyDudeRight);
   show(spicyDudeLeft);
-  show(alienImg);
-  show(ufoImg);
+  show(alien);
+  show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
+  newGame.startGame(spicyGame);
 }
+
+//functions for choice-making
+newGame.computer.choice = newGame.computer.playRoundClassic();
+newGame.user.choice = 'rock';
+function playRound(){
+  newGame.startGame
+  if (newGame.gameVersionChosen === classicGame){
+    newGame.computer.playRoundClassic(rock);
+    newGame.checkForWinner();
+  }
+  console.log(playRound())
+}
+
+  // if (gameVersionChosen === 'spicy'){
+  //   var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
+  //   return buddies = [Math.floor(Math.random() * buddies.length)];
+  // }
 
 
 

@@ -3,31 +3,45 @@ class Game {
     this.id = Date.now();
     this.user = new Player ("user", "🤠") ;
     this.computer = new Player ("computer", "💻 ");
-    this.gameVersionChosen = 'classic' || 'spicy';
-    // this.classicBuddyChoices = ['rock', 'paper', 'scissors'];
-    // this.buddyChoices = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-    this.winner;
+    this.gameVersionChosen = '';
+    this.winner = '';
   }
     checkForWinner(){
       if (this.user.choice === this.computer.choice){
         this.winner = 'tie';
       } else if(this.user.choice === 'rock' && this.computer.choice === 'alien' ||
-      this.user.choice === 'rock' && this.computer.choice === 'scissors' ||
+      this.user.choice === 'rock' && this.computer.choice === 'scissors'||
       this.user.choice === 'paper' && this.computer.choice === 'rock' ||
       this.user.choice === 'paper' && this.computer.choice === 'ufo' ||
-      this.user.choice === 'scissors' && this.computer.choice === 'paper' ||
-      this.user.choice === 'scissors' && this.computer.choice === 'alien' ||
+      this.user.choice === 'scissors' && this.computer.choice === 'paper'||
+      this.user.choice === 'scissors' && this.computer.choice === 'alien'  ||
       this.user.choice === 'alien' && this.computer.choice === 'paper' ||
-      this.user.choice === 'alien' && this.computer.choice === 'ufo' ||
+      this.user.choice === 'alien' && this.computer.choice === 'ufo'||
       this.user.choice === 'ufo' && this.computer.choice === 'scissors' ||
-      this.user.choice === 'ufo' && this.computer.choice === 'rock'){
+      this.user.choice === 'ufo' && this.computer.choice === 'rock'
+      ){
         this.user.winCount();
-        this.winner = this.user.name;
+        this.winner = 'user'
       } else {
         this.computer.winCount();
-        this.winner = this.computer.name;
+        this.winner = 'computer';
+      }
+      if (this.winner = 'user'){
+        return `🎉 You win! 🎉 `
+      } else if (this.winner = 'computer'){
+        return `You lost! 🥺  Try again.`
+      } else if(this.winner = 'tie'){
+        return `Great minds think alike! It's a tie 🤪 `
       }
     }
+    startGame (gameVersionChosen){
+      this.user.emoji = '';
+      this.computer.emoji = '';
+      this.gameVersionChosen = gameVersionChosen;
+    }
+    // declareWinner(){
+    //
+    // }
   }
 
 
