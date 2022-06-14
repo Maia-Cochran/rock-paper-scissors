@@ -1,45 +1,44 @@
 class Game {
   constructor(user, computer){
     this.id = Date.now();
-    this.user = new Player ("user", 🤠 ) ;
-    this.computer = new Player ("computer", 💻 );
-    this.gameVersionChosen = 'classic' || 'spicy';
-    this.classicBuddyChoices = ['rock', 'paper', 'scissors'];
-    this.spicyBuddyChoices = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-    this.userWinner = true;
+    this.user = new Player ("user", "token") ;
+    this.computer = new Player ("computer", "token");
+    this.gameVersionChosen = '';
+    this.winnerName = '';
   }
-  checkForWinner(userChoice, generatedChoice){
-    if(userChoice === generatedChoice){
-      return `Great minds think alike! It's a tie 🤪 `
-    } else if(userChoice === 'rock' && generatedChoice === 'paper' || generatedChoice === 'UFO'){
+  checkForWinner(){
+    if (this.user.choice === this.computer.choice){
+      return this.winner = 'tie';
+      //Need to check 'tie' portion of this method
+      //Currently not displaying a method where the user choice
+      //and the comp choice are the same, to satisfy the 'tie' method
+    }
+    if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
+      (this.user.choice === 'rock' && this.computer.choice === 'scissors') ||
+      (this.user.choice === 'paper' && this.computer.choice === 'rock') ||
+      (this.user.choice === 'paper' && this.computer.choice === 'ufo') ||
+      (this.user.choice === 'scissors' && this.computer.choice === 'paper')||
+      (this.user.choice === 'scissors' && this.computer.choice === 'alien') ||
+      (this.user.choice === 'alien' && this.computer.choice === 'paper') ||
+      (this.user.choice === 'alien' && this.computer.choice === 'ufo') ||
+      (this.user.choice === 'ufo' && this.computer.choice === 'scissors') ||
+      (this.user.choice === 'ufo' && this.computer.choice === 'rock'
+    )){
+      this.user.winCount();
+      this.winner = 'user'
+    } else {
       this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'rock' && generatedChoice === 'scissors' || generatedChoice === 'alien'){
-      this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'paper' && generatedChoice === 'scissors' || generatedChoice === 'alien'){
-      this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'paper' && generatedChoice === 'rock' || generatedChoice === 'UFO'){
-      this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'scissors' && generateChoice === 'paper' || generatedChoice === 'alien'){
-      this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'scissors' && generatedChoice === 'rock' || generatedChoice === 'UFO'){
-      this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'alien' && generatedChoice === 'rock' || generatedChoice === 'scissors'){
-      this.computer.winCount();
-      this.userWinner = false;
-    } else if(userChoice === 'alien' && generatedChoice === 'paper' || generatedChoice === 'UFO'){
-      this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'UFO' && generatedChoice === 'scissors' || generatedChoice === 'rock'){
-      this.user.winCount();
-      this.userWinner = true;
-    } else if(userChoice === 'UFO' && generatedChoice === 'alien' || generatedChoice === 'paper')
-    this.computer.winCount();
-    this.userWinner = false;
+      this.winner = 'computer';
+      }
+      console.log(this.computer.choice, 'choiceComp')
+      console.log(this.user.choice, 'choiceUser')
+      console.log(this.winner, 'weiner')
+      console.log(this.user.wins, 'user wins')
+      console.log(this.computer.wins, 'computer wins')
+    }
+    startGame (gameVersionChosen){
+      this.user.token = '';
+      this.computer.token = '';
+      this.gameVersionChosen = gameVersionChosen;
+    }
   }
-}
