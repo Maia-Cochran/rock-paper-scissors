@@ -4,6 +4,7 @@ class Player {
     this.token = '';
     this.wins = 0;
     this.choice = '';
+    this.winner = false;
   }
   takeTurn(){
     if(newGame.gameVersionChosen === 'classic'){
@@ -13,23 +14,6 @@ class Player {
     }
   }
   winCount(){
-    // if(newGame.user.winner === 'user' || 'computer'){
-      this.wins++
-    }
+    this.wins++
   }
-
-
-
-
-    // } else if(this.token === paper){
-    //   this.choice === `paper`;
-    // } else if(this.token === scissors){
-    //   this.choice === `scissors`
-    // } else if(this.token === alien){
-    //   this.choice === `alien`
-    // } else if(this.token === ufo){
-    //   this.choice === `ufo`
-    // }
-    // }
-//   }
-// }
+}
