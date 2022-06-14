@@ -4,6 +4,7 @@ class Player {
     this.token = '';
     this.wins = 0;
     this.choice = '';
+    this.winner = false;
   }
   takeTurn(){
     if(newGame.gameVersionChosen === 'classic'){

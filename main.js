@@ -36,11 +36,6 @@ var compScore = document.querySelector('.computer-win-count');
   var classicBuddies = ['rock', 'paper', 'scissors'];
   var spicyBuddies = ['rock', 'paper', 'scissors', 'ufo', 'alien'];
 
-function getRandomItemFromArray(array) {
-  var randomArrayIndex = Math.floor(Math.random() * array.length);
-  return array[randomArrayIndex]
-}
-
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
@@ -49,21 +44,20 @@ paper.addEventListener('click', determineUserChoice);
 scissors.addEventListener('click', determineUserChoice);
 alien.addEventListener('click', determineUserChoice);
 ufo.addEventListener('click', determineUserChoice);
-// scoreBox.addEventListener('click', showScore);
 
-//functions
-//helper functions!
+//helper functions
 function hide(elements){
-    elements.classList.add('hidden');
+  elements.classList.add('hidden');
 }
 
 function show(elements){
-    elements.classList.remove('hidden');
+  elements.classList.remove('hidden');
 }
 
-
-// function resetGame(){
-  // chooseBuddyText.innerText = `Choose your buddy!`
+function getRandomItemFromArray(array) {
+  var randomArrayIndex = Math.floor(Math.random() * array.length);
+  return array[randomArrayIndex]
+}
 
 //functions for view changes
 function displayClassic(){
@@ -74,8 +68,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  // newGame.startGame('classic');
-  newGame.gameVersionChosen = 'classic';
+  newGame.startGame('classic');
 }
 
 function displaySpicy(){
@@ -90,8 +83,7 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  // newGame.startGame('spicy');
-  newGame.gameVersionChosen = 'spicy';
+  newGame.startGame('spicy');
 }
 
 //functions for choice-making
@@ -106,18 +98,20 @@ function determineUserChoice(){
 function showWinner(){
   if(newGame.user.choice === newGame.computer.choice){
     chooseBuddyText.innerText = `Great minds think alike! It's a tie 🤪 `
-  } else if(newGame.user.wins){
+  } else if(newGame.user.winner === true){
     chooseBuddyText.innerText = `${newGame.user.choice} beats ${newGame.computer.choice}!
     🎉 You win! 🎉 `
-  } else if(newGame.computer.wins){
+  } else if(newGame.computer.winner === true){
     chooseBuddyText.innerText = `${newGame.computer.choice} beats ${newGame.user.choice}!
     You lost! 🥺  Try again.`;
   }
-  setTimeout(resetGame, 1500);
+  setTimeout(resetGame, 1600);
 }
 
 function resetGame(){
   newGame.startGame();
+  newGame.user.winner = false;
+  newGame.computer.winner = false;
   chooseBuddyText.innerText = `Choose another buddy!`
 }
 

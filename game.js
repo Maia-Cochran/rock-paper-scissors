@@ -18,17 +18,12 @@ class Game {
        (this.user.choice === 'alien' && this.computer.choice === 'ufo') ||
        (this.user.choice === 'ufo' && this.computer.choice === 'scissors') ||
        (this.user.choice === 'ufo' && this.computer.choice === 'rock')){
-         this.winner = 'user'
+         this.user.winner = true;
          this.user.winCount();
      } else {
-       this.winner = 'computer';
+       this.computer.winner = true;
        this.computer.winCount();
        }
-       console.log(this.computer.choice, 'choiceComp')
-       console.log(this.user.choice, 'choiceUser')
-       console.log(this.winner, 'weiner')
-       console.log(this.user.wins, 'user wins')
-       console.log(this.computer.wins, 'computer wins')
      }
      startGame (gameVersionChosen){
        this.user.token = '';
