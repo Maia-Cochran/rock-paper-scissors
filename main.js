@@ -1,14 +1,3 @@
-//WHAT is left?
-//Create a method for the game reset button
-//display message and winning character once icon clicked
-//when icon is clicked, set pause/time-out to display
-//the winning icon & msg for 1 full seccond
-//create function for displaying points earned/score
-//likely going to be using a push method oooorrrrrr could be
-//a method that will just update the output on the view being displayed
-//refactor, refactor, refactor
-
-
 //querySelectors
 var newGame = new Game();
 var classicGame = document.querySelector('.game-classic');
@@ -97,15 +86,25 @@ function determineUserChoice(){
 
 function showWinner(){
   if(newGame.user.choice === newGame.computer.choice){
-    chooseBuddyText.innerText = `Great minds think alike! It's a tie 🤪 `
+    chooseBuddyText.innerText = `Great minds think alike! 👯‍♀️
+
+    We both picked ${newGame.user.choice} as our buddy!
+
+    🤪 It's a tie 🤪`
   } else if(newGame.user.winner === true){
-    chooseBuddyText.innerText = `${newGame.user.choice} beats ${newGame.computer.choice}!
-    🎉 You win! 🎉 `
+    chooseBuddyText.innerText = `🎉 You win! 🎉
+
+    Your ${newGame.user.choice} buddy beats my ${newGame.computer.choice}!
+
+    Well-played, my friend. 😎`
   } else if(newGame.computer.winner === true){
-    chooseBuddyText.innerText = `${newGame.computer.choice} beats ${newGame.user.choice}!
-    You lost! 🥺  Try again.`;
+    chooseBuddyText.innerText = `Ah ha! I knew I could do it. 😏
+
+    My buddy ${newGame.computer.choice} beats your ${newGame.user.choice}!
+
+    🥺 You lose! 🥺`
   }
-  setTimeout(resetGame, 1600);
+  setTimeout(resetGame, 3100);
 }
 
 function resetGame(){
