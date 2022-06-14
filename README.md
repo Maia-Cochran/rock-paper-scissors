@@ -21,6 +21,12 @@ The spec for this project can be found [here](https://frontend.turing.edu/projec
 ### Features
 A user will have the choice of a classic rock, paper, scissors game, or the spicy version which includes additional rules and characters such as an alien and a UFO. In either option, the user can choose their character to face the computer-generated character choice. Based on the rules of the game (displayed on the initial load page), the user will either win, lose, or tie. When the round does not result in a tie, the score of the winner will be logged in the appropriate side of the screen, according to who won the round.
 
+### Possible Future Extensions
+- Add a reset game button to the page when playing game
+- Show the winning icon when the game is played
+- Save and log scores for each opponent
+- Make the game multiplayer between humans
+- Have a login page and allow user to have an account
 <!-- ##Deployed Page
 Vist the webpage here. -->
 ### Sources
