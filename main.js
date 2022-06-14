@@ -106,16 +106,14 @@ function determineUserChoice(){
 function showWinner(){
   if(newGame.user.choice === newGame.computer.choice){
     chooseBuddyText.innerText = `Great minds think alike! It's a tie 🤪 `
-    setTimeout(resetGame, 2500);
   } else if(newGame.user.wins){
     chooseBuddyText.innerText = `${newGame.user.choice} beats ${newGame.computer.choice}!
     🎉 You win! 🎉 `
-    setTimeout(resetGame, 2500);
   } else if(newGame.computer.wins){
     chooseBuddyText.innerText = `${newGame.computer.choice} beats ${newGame.user.choice}!
     You lost! 🥺  Try again.`;
-    setTimeout(resetGame, 2500);
   }
+  setTimeout(resetGame, 1500);
 }
 
 function resetGame(){
