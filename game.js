@@ -8,10 +8,8 @@ class Game {
   }
   checkForWinner(){
     if (this.user.choice === this.computer.choice){
-      this.computer.wins--;
       this.winner = 'tie';
-    }
-    if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
+    } else if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
       (this.user.choice === 'rock' && this.computer.choice === 'scissors') ||
       (this.user.choice === 'paper' && this.computer.choice === 'rock') ||
       (this.user.choice === 'paper' && this.computer.choice === 'ufo') ||

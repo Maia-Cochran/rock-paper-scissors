@@ -29,6 +29,8 @@ var classicDudeLeft = document.querySelector('.classic-score-left');
 var classicDudeRight = document.querySelector('.classic-score-right');
 var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
+var userScore = document.querySelector('.user-win-count');
+var compScore = document.querySelector('.computer-win-count');
 
 //global variables
   var classicBuddies = ['rock', 'paper', 'scissors'];
@@ -47,6 +49,7 @@ paper.addEventListener('click', determineUserChoice);
 scissors.addEventListener('click', determineUserChoice);
 alien.addEventListener('click', determineUserChoice);
 ufo.addEventListener('click', determineUserChoice);
+// scoreBox.addEventListener('click', showScore);
 
 //functions
 //helper functions!
@@ -58,6 +61,10 @@ function show(elements){
     elements.classList.remove('hidden');
 }
 
+
+// function resetGame(){
+  // chooseBuddyText.innerText = `Choose your buddy!`
+
 //functions for view changes
 function displayClassic(){
   hide(gameVersionView);
@@ -67,8 +74,8 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  newGame.startGame('classic');
-  // newGame.gameVersionChosen = 'classic';
+  // newGame.startGame('classic');
+  newGame.gameVersionChosen = 'classic';
 }
 
 function displaySpicy(){
@@ -83,8 +90,8 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  newGame.startGame('spicy');
-  // newGame.gameVersionChosen = 'spicy';
+  // newGame.startGame('spicy');
+  newGame.gameVersionChosen = 'spicy';
 }
 
 //functions for choice-making
@@ -93,44 +100,33 @@ function determineUserChoice(){
   newGame.computer.takeTurn();
   newGame.checkForWinner();
   showWinner();
-  resetGame();
-  console.log(resetGame, "wtF")
+  showScore();
 }
 
 function showWinner(){
-  if(newGame.computer.wins){
-    chooseBuddyText.innerText = `You lost! 🥺  Try again.`;
-  } else if(newGame.user.wins){
-    chooseBuddyText.innerText = `🎉 You win! 🎉 `
-  } else {
+  if(newGame.user.choice === newGame.computer.choice){
     chooseBuddyText.innerText = `Great minds think alike! It's a tie 🤪 `
+    setTimeout(resetGame, 2500);
+  } else if(newGame.user.wins){
+    chooseBuddyText.innerText = `${newGame.user.choice} beats ${newGame.computer.choice}!
+    🎉 You win! 🎉 `
+    setTimeout(resetGame, 2500);
+  } else if(newGame.computer.wins){
+    chooseBuddyText.innerText = `${newGame.computer.choice} beats ${newGame.user.choice}!
+    You lost! 🥺  Try again.`;
+    setTimeout(resetGame, 2500);
   }
 }
 
 function resetGame(){
-  // chooseBuddyText.innerText = `Choose your buddy!`
-  if (newGame.gameVersionChosen === 'classic') {
-    window.setTimeout(displayClassic, 2500)
-  } else {
-    window.setTimeout(displaySpicy, 2500);
-  }
+  newGame.startGame();
+  chooseBuddyText.innerText = `Choose another buddy!`
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function showScore(){
+  userScore.innerText = newGame.user.wins
+  compScore.innerText = newGame.computer.wins
+}
 
 //^^^ matching user click to specific img from page^^^
-
-
 // return chooseBuddyText.innerText = `Nice! Rock buddy was chosen!`
