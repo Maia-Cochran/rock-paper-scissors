@@ -8,10 +8,8 @@ class Game {
   }
   checkForWinner(){
     if (this.user.choice === this.computer.choice){
-      return this.winner = 'tie';
-      //Need to check 'tie' portion of this method
-      //Currently not displaying a method where the user choice
-      //and the comp choice are the same, to satisfy the 'tie' method
+      this.computer.wins--;
+      this.winner = 'tie';
     }
     if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
       (this.user.choice === 'rock' && this.computer.choice === 'scissors') ||
