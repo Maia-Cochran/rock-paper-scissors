@@ -27,4 +27,5 @@ Vist the webpage here. -->
 - MDN
 - W3SCHOOLS
 - Turing Front End Lessons
-
+- JavaScript & JQuery by Jon Duckett
+- HTML & CSS by Jon Duckett

@@ -1,3 +1,14 @@
+//WHAT is left?
+//Create a method for the game reset button
+//display message and winning character once icon clicked
+//when icon is clicked, set pause/time-out to display
+//the winning icon & msg for 1 full seccond
+//create function for displaying points earned/score
+//likely going to be using a push method oooorrrrrr could be
+//a method that will just update the output on the view being displayed
+//refactor, refactor, refactor
+
+
 //querySelectors
 var newGame = new Game();
 var classicGame = document.querySelector('.game-classic');
@@ -56,7 +67,8 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  newGame.gameVersionChosen = 'classic';
+  newGame.startGame('classic');
+  // newGame.gameVersionChosen = 'classic';
 }
 
 function displaySpicy(){
@@ -71,31 +83,54 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  newGame.gameVersionChosen = 'spicy';
+  newGame.startGame('spicy');
+  // newGame.gameVersionChosen = 'spicy';
 }
-
 
 //functions for choice-making
 function determineUserChoice(){
   newGame.user.choice = event.target.id;
-  newGame.computer.computerChoiceRandom();
-  newGame.checkForWinner()
+  newGame.computer.takeTurn();
+  newGame.checkForWinner();
+  showWinner();
+  resetGame();
+  console.log(resetGame, "wtF")
 }
-//^^^ mathcing user click to specific img from page^^^
+
+function showWinner(){
+  if(newGame.computer.wins){
+    chooseBuddyText.innerText = `You lost! 🥺  Try again.`;
+  } else if(newGame.user.wins){
+    chooseBuddyText.innerText = `🎉 You win! 🎉 `
+  } else {
+    chooseBuddyText.innerText = `Great minds think alike! It's a tie 🤪 `
+  }
+}
+
+function resetGame(){
+  // chooseBuddyText.innerText = `Choose your buddy!`
+  if (newGame.gameVersionChosen === 'classic') {
+    window.setTimeout(displayClassic, 2500)
+  } else {
+    window.setTimeout(displaySpicy, 2500);
+  }
+}
 
 
 
 
 
-//temporary reject functions
-// function declareWinner(winner){
-// if (this.winner = 'user'){
-//   return `🎉 You win! 🎉 `
-// } else if (this.winner = 'computer'){
-//   return `You lost! 🥺  Try again.`
-// } else if(this.winner = 'tie'){
-//   return `Great minds think alike! It's a tie 🤪 `
-// }
-// ^^^use innerText/innerHTML^^^
-// }
+
+
+
+
+
+
+
+
+
+
+//^^^ matching user click to specific img from page^^^
+
+
 // return chooseBuddyText.innerText = `Nice! Rock buddy was chosen!`
