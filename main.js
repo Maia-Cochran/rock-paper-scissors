@@ -91,16 +91,22 @@ function determineUserChoice(){
   newGame.computer.computerChoiceRandom();
   newGame.checkForWinner()
 }
-//^^^ mathcing user click to specific img from page^^^
+//^^^ matching user click to specific img from page^^^
 
 //temporary reject functions
 // function declareWinner(winner){
 // if (this.winner = 'user'){
+//then this.user.choice id is returned w/image
 //   return `🎉 You win! 🎉 `
 // } else if (this.winner = 'computer'){
+// then the this.computer.choice id is return w/image
+//this image will be the 'choose buddy view' and the innerText will
+//go into the 'choose buddy text' area of the view.
 //   return `You lost! 🥺  Try again.`
 // } else if(this.winner = 'tie'){
 //   return `Great minds think alike! It's a tie 🤪 `
+//display the tie with the two images chosen, which are the same,
+//ensure either no points are added to either end or both are awarded points
 // }
 // ^^^use innerText/innerHTML^^^
 // }
