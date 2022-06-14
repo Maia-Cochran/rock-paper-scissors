@@ -1,3 +1,14 @@
+//WHAT is left?
+//Create a method for the game reset button
+//display message and winning character once icon clicked
+//when icon is clicked, set pause/time-out to display
+//the winning icon & msg for 1 full seccond
+//create function for displaying points earned/score
+//likely going to be using a push method oooorrrrrr could be
+//a method that will just update the output on the view being displayed
+//refactor, refactor, refactor
+
+
 //querySelectors
 var newGame = new Game();
 var classicGame = document.querySelector('.game-classic');
@@ -74,7 +85,6 @@ function displaySpicy(){
   newGame.gameVersionChosen = 'spicy';
 }
 
-
 //functions for choice-making
 function determineUserChoice(){
   newGame.user.choice = event.target.id;
@@ -82,10 +92,6 @@ function determineUserChoice(){
   newGame.checkForWinner()
 }
 //^^^ mathcing user click to specific img from page^^^
-
-
-
-
 
 //temporary reject functions
 // function declareWinner(winner){
