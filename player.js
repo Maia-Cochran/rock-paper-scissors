@@ -10,7 +10,7 @@ class Player {
     var buddyRandomClassic = [Math.floor(Math.random() * buddies.length)];
     return buddies[buddyRandomClassic];
   }
-  playRoundSpicy (){
+  playRoundSpicy(){
     var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
     var buddyRandomSpicy = [Math.floor(Math.random() * buddies.length)];
     return buddies[buddyRandomSpicy];

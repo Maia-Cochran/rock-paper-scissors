@@ -29,12 +29,7 @@ scissors.addEventListener('click', playRound);
 alien.addEventListener('click', playRound);
 ufo.addEventListener('click', playRound);
 
-
-
-// paperImg.addEventListener('click', userWinsByPaper);
-// scissorsImg.addEventListener('click', userWinsByScissors);
-// alienImg.addEventListener('click', userWinsByAlien);
-// ufoImg.addEventListener('click', userWinsByUfo);
+console.log(rock)
 
 //functions
 //helper functions!
@@ -55,7 +50,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  newGame.startGame();
+  // newGame.startGame(classicGame);
 }
 
 function displaySpicy(){
@@ -70,23 +65,69 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  newGame.startGame();
+  // newGame.startGame(spicyGame);
 }
 
 //functions for choice-making
-function playRound(rock){
-  // newGame.startGame('classic');
-  // console.log('henlo')
+function playRound(){
+  // chooseBuddy();
   if (newGame.gameVersionChosen === 'classic'){
-    newGame.computer.playRoundClassic();
+    newGame.playRoundClassic();
+  } else if(newGame.gameVersionChosen === 'spicy'){
+    newGame.playRoundSpicy();
   }
-  return newGame.checkForWinner();
+  newGame.checkForWinner(newGame.userChoice);
 }
 
-  // if (gameVersionChosen === 'spicy'){
-  //   var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-  //   return buddies = [Math.floor(Math.random() * buddies.length)];
+// function chooseUserBuddy(){
+//   for (var i = 0; i < buddies.length){
+//
+//   }
+// }
+
+function chooseBuddy(){
+  if(scissors.clicked){
+    newGame.user.choice === `scissors`;
+  // } else if(newGame.user.choice === paper){
+  //   newGame.checkForWinner(`paper`);
+    // newGame.checkForWinner(`scissors`)
+  }
+}
+// }
+  // } else if(scissors.clicked){
+  //  newGame.user.choice = `scissors`;
+  // } else if(alien.clicked){
+  //  newGame.user.choice = `alien`
+  // } else if(ufo.clicked){
+  //  newGame.user.choice = `ufo`
   // }
+  // newGame.checkForWinner();
+ // }
+
+// function chooseClassicGame(){
+//   newGame.gameVersionChosen = 'classic';
+//   displayClassic();
+// }
+
+// declareWinner(winner){
+// if (this.winner = 'user'){
+//   return `🎉 You win! 🎉 `
+// } else if (this.winner = 'computer'){
+//   return `You lost! 🥺  Try again.`
+// } else if(this.winner = 'tie'){
+//   return `Great minds think alike! It's a tie 🤪 `
+// }
+// }
+
+
+// function userMakesChoice(){
+//   rock =
+//   }
+//   playRound();
+// }
+
+
+
 
 
 
