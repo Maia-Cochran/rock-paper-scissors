@@ -1,19 +1,20 @@
 class Game {
-  constructor(user, computer, userChoice){
+  constructor(user, computer){
     this.id = Date.now();
     this.user = new Player ("user", "token") ;
     this.computer = new Player ("computer", "token");
     this.gameVersionChosen = '';
     this.winnerName = '';
     // this.isWinning = true;
-    this.userChoice = '';
+    // this.userChoice = '';
     // this.computerChoice = this.computer.playRoundClassic;
   }
-  checkForWinner(userChoice){
-      // this.user.choice = userChoice;
-      this.computer.choice = this.computer.playRoundClassic();
+  checkForWinner(){
+    // newGame.user.takeTurn();
+    // newGame.computer.takeTurn();
+
     if (this.user.choice === this.computer.choice){
-      return this.winner = 'tie';
+      this.winner = 'tie';
     }
     if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
       (this.user.choice === 'rock' && this.computer.choice === 'scissors') ||
@@ -32,15 +33,15 @@ class Game {
       this.computer.winCount();
       this.winner = 'computer';
       }
-      console.log(this.computer.choice)
-      console.log(this.user.choice)
-      console.log(this.winner)
-      console.log(this.user.wins)
-      console.log(this.computer.wins)
+      console.log(this.computer.choice, 'choiceComp')
+      console.log(this.user.choice, 'choiceUser')
+      console.log(this.winner, 'weiner')
+      console.log(this.user.wins, 'user wins')
+      console.log(this.computer.wins, 'computer wins')
     }
     startGame (gameVersionChosen){
-      this.user.emoji = '';
-      this.computer.emoji = '';
+      this.user.token = '';
+      this.computer.token = '';
       this.gameVersionChosen = gameVersionChosen;
     }
   }

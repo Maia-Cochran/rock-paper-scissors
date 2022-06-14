@@ -19,17 +19,18 @@ var classicDudeRight = document.querySelector('.classic-score-right');
 var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
 
+//global variables
+var spicyBuddies = [rock, paper, scissors, ufo, alien];
+var classicBuddies = [rock, paper, scissors];
 
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
-rock.addEventListener('click', playRound);
-paper.addEventListener('click', playRound);
-scissors.addEventListener('click', playRound);
-alien.addEventListener('click', playRound);
-ufo.addEventListener('click', playRound);
-
-console.log(rock)
+rock.addEventListener('click', determineUserChoice);
+paper.addEventListener('click', determineUserChoice);
+scissors.addEventListener('click', determineUserChoice);
+alien.addEventListener('click', determineUserChoice);
+ufo.addEventListener('click', determineUserChoice);
 
 //functions
 //helper functions!
@@ -50,7 +51,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  // newGame.startGame(classicGame);
+  newGame.gameVersionChosen = 'classic';
 }
 
 function displaySpicy(){
@@ -65,34 +66,58 @@ function displaySpicy(){
   show(ufo);
   show(spicyTitle1);
   show(spicyTitle2);
-  // newGame.startGame(spicyGame);
+  newGame.gameVersionChosen = 'spicy';
 }
 
 //functions for choice-making
-function playRound(){
-  // chooseBuddy();
-  if (newGame.gameVersionChosen === 'classic'){
-    newGame.playRoundClassic();
-  } else if(newGame.gameVersionChosen === 'spicy'){
-    newGame.playRoundSpicy();
-  }
-  newGame.checkForWinner(newGame.userChoice);
+function determineUserChoice(){
+  newGame.user.choice = event.target.id;
+  newGame.computer.choice = newGame.computer.computerChoiceRandom();
+  // newGame.checkForWinner()
+  console.log(event.target.id, 'meep')
 }
+//^^^ mathcing user click to specific img from page^^^
 
-// function chooseUserBuddy(){
-//   for (var i = 0; i < buddies.length){
-//
+
+// function playRound(){
+//   // newGame.user.takeTurn();
+//   // newGame.computer.takeTurn();
+//   // determineUserChoice();
+//   // if (){
+//       newGame.startGame(classicGame);
+//       newGame.computer.playRoundClassic();
+//   // } else if(){
+//       newGame.startGame(spicyGame);
+//       newGame.computer.playRoundSpicy();
 //   }
+//   newGame.checkForWinner();
+// }
+//^^^ selecting game version and randomizing computer choice ^^^
+
+// function chooseThisBuddy(){
+//   if(rock.clicked){
+//     newGame.user.choice === `rock`
+//   }
+//   newGame.checkForWinner(`rock`)
 // }
 
-function chooseBuddy(){
-  if(scissors.clicked){
-    newGame.user.choice === `scissors`;
-  // } else if(newGame.user.choice === paper){
-  //   newGame.checkForWinner(`paper`);
-    // newGame.checkForWinner(`scissors`)
-  }
-}
+
+//
+// function chooseBuddy(){
+// //   for (var i = 0; i < buddies.length){
+// //
+// //   }
+// // }
+//
+//    if(scissors.clicked){
+//     newGame.user.choice === `scissors`;
+//   }
+//     // } else if(newGame.user.choice === paper){
+// //   //   newGame.checkForWinner(`paper`);
+//     newGame.checkForWinner(`rock`)
+//   }
+//   }
+// }
 // }
   // } else if(scissors.clicked){
   //  newGame.user.choice = `scissors`;
@@ -117,17 +142,7 @@ function chooseBuddy(){
 // } else if(this.winner = 'tie'){
 //   return `Great minds think alike! It's a tie 🤪 `
 // }
-// }
-
-
-// function userMakesChoice(){
-//   rock =
-//   }
-//   playRound();
-// }
-
-
-
+// } ^^^use innerText/innerHTML^^^
 
 
 
