@@ -6,25 +6,17 @@ class Player {
     this.choice = '';
   }
   computerChoiceRandom(){
-    if(game.gameVersionChosen === 'classic'){
-      game.computer.choice = classicBuddies[Math.floor(Math.random() * classicBuddies.length)];
-    } else if(game.gameVersionChosen === 'spicy'){
-      game.computer.choice = spicyBuddies[Math.floor(Math.random() * spicyBuddies.length)]
+    if(newGame.gameVersionChosen === 'classic'){
+    newGame.computer.choice = classicBuddies[Math.floor(Math.random() * classicBuddies.length)];
+  } else if(newGame.gameVersionChosen === 'spicy'){
+    newGame.computer.choice = spicyBuddies[Math.floor(Math.random() * spicyBuddies.length)];
     }
   }
-  // playRoundClassic(){
-  //   var buddies = ['rock', 'paper', 'scissors'];
-  //   var buddyRandomClassic = [Math.floor(Math.random() * buddies.length)];
-  //   game.computer.choice = buddies.buddyRandomClassic;
-  // }
-  // playRoundSpicy(){
-  //   var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
-  //   var buddyRandomSpicy = [Math.floor(Math.random() * buddies.length)];
-  //   game.computer.choice = buddies.buddyRandomSpicy;
-  //   }
   winCount(){
-    this.wins++;
-  }
+    // if(newGame.user.winner === 'user' || 'computer'){
+      this.wins++
+    }
+  // }
 
 
 
@@ -35,7 +27,16 @@ class Player {
   //     this.choice = buddyChoices[Math.floor(Math.random() * buddyChoices.length)].id
   //   }
 
-
+  // playRoundClassic(){
+  //   var buddies = ['rock', 'paper', 'scissors'];
+  //   var buddyRandomClassic = [Math.floor(Math.random() * buddies.length)];
+  //   game.computer.choice = buddies.buddyRandomClassic;
+  // }
+  // playRoundSpicy(){
+  //   var buddies = ['rock', 'paper', 'scissors', 'alien', 'ufo'];
+  //   var buddyRandomSpicy = [Math.floor(Math.random() * buddies.length)];
+  //   game.computer.choice = buddies.buddyRandomSpicy;
+  //   }
 
 
 

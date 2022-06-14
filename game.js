@@ -5,16 +5,13 @@ class Game {
     this.computer = new Player ("computer", "token");
     this.gameVersionChosen = '';
     this.winnerName = '';
-    // this.isWinning = true;
-    // this.userChoice = '';
-    // this.computerChoice = this.computer.playRoundClassic;
   }
   checkForWinner(){
-    // newGame.user.takeTurn();
-    // newGame.computer.takeTurn();
-
     if (this.user.choice === this.computer.choice){
-      this.winner = 'tie';
+      return this.winner = 'tie';
+      //Need to check 'tie' portion of this method
+      //Currently not displaying a method where the user choice
+      //and the comp choice are the same, to satisfy the 'tie' method
     }
     if((this.user.choice === 'rock' && this.computer.choice === 'alien') ||
       (this.user.choice === 'rock' && this.computer.choice === 'scissors') ||
