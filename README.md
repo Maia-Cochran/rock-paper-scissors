@@ -19,6 +19,10 @@ Enjoy!
 ### Features
 A user will have the choice of a classic rock, paper, scissors game, or the spicy version (where additional rules and characters such as an alien and a UFO are added). In either option, the user can choose their character to face the computer-generated character choice. The user will either win, lose, or tie, based on the rules of the game version chosen on the home page. When the round does not result in a tie, the score of the winner will be logged in the appropriate side of the screen, according to who won the round. After each turn, a message generates to alert the user who won and which tokens were chosen for both user and computer. After a few seconds, the message disappears and a new message indicates that the game is ready for another round!
 
+### Demo
+
+
+
 ### Possible Future Extensions
 - Add a reset game button to the page when playing game
 - Show the winning icon when the game is played
