@@ -104,20 +104,17 @@ function showWinner(){
 
     🥺 You lose! 🥺`
   }
-  setTimeout(resetGame, 3100);
+  setTimeout(resetGame, 2900);
 }
 
 function resetGame(){
   newGame.startGame();
   newGame.user.winner = false;
   newGame.computer.winner = false;
-  chooseBuddyText.innerText = `Choose another buddy!`
+  chooseBuddyText.innerText = `Choose another buddy to keep playing!`
 }
 
 function showScore(){
   userScore.innerText = newGame.user.wins
   compScore.innerText = newGame.computer.wins
 }
-
-//^^^ matching user click to specific img from page^^^
-// return chooseBuddyText.innerText = `Nice! Rock buddy was chosen!`
