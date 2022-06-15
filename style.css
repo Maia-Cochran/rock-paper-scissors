@@ -1,4 +1,5 @@
 * {
+  /* border: solid 2px magenta; */
   font-family: "Tahoma";
 }
 
@@ -7,39 +8,11 @@ body {
 }
 
 .title {
-  border: dotted #39ff14 10px;
-  padding: 5px;
+  border: dotted #39ff14 5px;
+  border-radius: 20px;
   background-image: url("./assets/starry.jpeg");
-}
-
-h1 {
-  margin: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 200%;
-  color: darkgray;
-}
-
-h2, .choose-buddy-text, .choose-game-view-text {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 150%;
-  color: magenta;
-}
-
-h3 {
-  text-align: center;
-  margin-bottom: 2px;
-  font-size: 400%;
-  color: magenta;
-}
-
-h4 {
-  text-align: center;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  font-size: 115%;
-  color: blue;
+  margin: 35px;
+  padding: 35px;
 }
 
 .paper-title {
@@ -55,56 +28,76 @@ h4 {
 }
 
 .spicy-title2 {
-  margin-left: 82%;
+  margin-left: 85%;
+}
+
+h1 {
+  color: darkgray;
+  font-size: 200%;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+h2, .choose-buddy-text, .choose-game-view-text {
+  color: magenta;
+  font-size: 150%;
+  margin: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+h3 {
+  color: magenta;
+  font-size: 400%;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+h4 {
+  color: blue;
+  font-size: 115%;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  text-align: center;
 }
 
 .user-win-count, .computer-win-count {
-  text-align: center;
-  margin-top: 2px;
   color: magenta;
+  text-align: center;
 }
 
 .columns {
   display: flex;
   justify-content: space-around;
   align-content: center;
-}
-
-.player-column-left, .player-column-right {
-  padding: 40px;
-  font-size: 12pt;
-  margin-bottom: 2px;
-  height: 50%;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .game-choice-container {
   display: flex;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin: 10px;
 }
 
 button {
   background-image: radial-gradient(pink, blue, indigo, green, blue, blueviolet, green, blueviolet, indigo, blue, lightgreen);
+  border: 4pt dotted yellow;
+  border-radius: 55%;
   color: yellow;
-  border: 8pt dotted yellow;
-  font-weight: bolder;
-  height: 400px;
-  width: 250px;
-  border-radius: 7px;
-  margin: 65px;
   font-size: 18pt;
+  font-weight: bolder;
+  height: 370px;
+  width: 400px;
 }
 
 p {
-  margin: 15px;
   font-size: 12pt;
   font-weight: lighter;
-  align-items: center;
-}
-
-.chooseBuddyView {
-  height:auto;
-  width:auto;
+  margin: 15px;
 }
 
 .buddies-container {
@@ -117,14 +110,14 @@ p {
 }
 
 img {
-  height: 100px;
-  width: 100px;
+  background-image: url("./assets/starry.jpeg");
+  border: dotted #39ff14 4px;
+  border-radius: 100px;
+  height: 100%;
   margin: 18px;
   margin-top: 50px;
+  width: 150px;
   padding: 5px;
-  border: dotted #39ff14 4px;
-  border-radius: 6px;
-  background-image: url("./assets/starry.jpeg");
 }
 
 .hidden {
