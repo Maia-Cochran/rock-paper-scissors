@@ -1,6 +1,6 @@
-# Rock Paper Scissors Final Solo Project
+# ✨ Rock Paper Scissors Final Solo Project ✨ 
 
-## Rock, Paper, Scissors (Alien, UFO)
+## Rock, Paper, Scissors (Alien, UFO) 
 - Cohort 2205 Solo Project
 - Contributors: Maia Cochran
 
@@ -25,8 +25,7 @@ Enjoy!
 - After a few seconds, the message disappears and a new message indicates that the game is ready for another round!
 
 ## Demo
-
-
+https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631-a93a-a8779a647c71.mov
 
 ## Possible Future Extensions
 - Add a reset game button to the page when playing game
@@ -35,9 +34,8 @@ Enjoy!
 - Make the game multiplayer between humans
 - Have a login page and allow user to have an account
 
-
-##Deployed Page
-- Vist the webpage [here]
+## Deployed Page
+- Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors-final-solo/).
 
 ### Sources
 - MDN
