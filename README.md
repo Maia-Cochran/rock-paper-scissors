@@ -28,7 +28,7 @@ Enjoy!
 - User can return to the home page to choose a new game version to play.
 
 ## Demo
-https://user-images.githubusercontent.com/101746747/173770329-ce024796-0df1-4d1c-a9dc-051fab5dad2e.mov
+https://user-images.githubusercontent.com/101746747/173922084-4530006e-42d8-4cb8-a444-3b99ee5af2c9.mov
 
 ## Possible Future Extensions
 - Show the winning icon when the game is played
