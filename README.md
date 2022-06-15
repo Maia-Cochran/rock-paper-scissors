@@ -1,10 +1,10 @@
 # Rock Paper Scissors Final Solo Project
 
 ## Rock, Paper, Scissors (Alien, UFO)
-Cohort 2205 Solo Project
-Contributors: Maia Cochran
+- Cohort 2205 Solo Project
+- Contributors: Maia Cochran
 
-### Overview
+## Overview
 I built a website where the user can play rock, paper, scissors against a computer-generated player. There are both classic and spicy versions of the game for the user to choose a game type. This site also includes a point-counting system in which the page includes a feature where both the computer and the users victories are logged for the game session.
 
 This project gave me an opportunity to write HTML and CSS, and leverage JavaScript to both create a data model and interact with the DOM.
