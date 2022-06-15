@@ -25,9 +25,7 @@ Enjoy!
 - After a few seconds, the message disappears and a new message indicates that the game is ready for another round!
 
 ## Demo
-https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631-a93a-a8779a647c71.mov
-* Please note that CSS has been altered since the creation of the above demo.
-* However, the code written to provide the page's functionality, naming conventions, etc. remain the same.
+https://user-images.githubusercontent.com/101746747/173770329-ce024796-0df1-4d1c-a9dc-051fab5dad2e.mov
 
 ## Possible Future Extensions
 - Add a reset game button to the page when playing game
@@ -38,8 +36,6 @@ https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631
 
 ## Deployed Page
 - Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors-final-solo/).
-* Please note that CSS has been altered since the creation of the above deployed link.
-* However, the code written to provide the page's functionality, naming conventions, etc. remain the same.
 
 ### Sources
 - MDN
