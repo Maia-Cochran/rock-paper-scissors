@@ -1,16 +1,15 @@
 * {
   font-family: "Tahoma";
-  font-weight: lighter;
-  /* border: solid magenta 3px; */
 }
 
 body {
-  background-image: radial-gradient(lightgreen, blue, purple);
+  background-color: black;
 }
 
 .title {
-  border: dotted 3pt lightyellow;'
+  border: dotted #39ff14 10px;
   padding: 5px;
+  background-image: url("./assets/starry.jpeg");
 }
 
 h1 {
@@ -18,20 +17,29 @@ h1 {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 200%;
-  font-weight: bold;
+  color: darkgray;
+}
+
+h2, .choose-buddy-text, .choose-game-view-text {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 150%;
+  color: magenta;
 }
 
 h3 {
   text-align: center;
   margin-bottom: 2px;
-  font-weight: bold;
-  font-size: 200%;
+  font-size: 400%;
+  color: magenta;
 }
 
 h4 {
+  text-align: center;
   margin-top: 1px;
   margin-bottom: 1px;
-  font-size: 100%;
+  font-size: 115%;
+  color: blue;
 }
 
 .paper-title {
@@ -43,15 +51,21 @@ h4 {
 }
 
 .spicy-title1 {
-  margin-left: 60%;
+  margin-left: 65%;
 }
 
 .spicy-title2 {
-  margin-left: 80%;
+  margin-left: 82%;
+}
+
+.user-win-count, .computer-win-count {
+  text-align: center;
+  margin-top: 2px;
+  color: magenta;
 }
 
 .columns {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-content: center;
 }
@@ -63,13 +77,6 @@ h4 {
   height: 50%;
 }
 
-
-.user-win-count, .computer-win-count {
-  margin-top: 2px;
-  height: 20px;
-  width: 20px;
-}
-
 .game-choice-container {
   display: flex;
   align-content: center;
@@ -77,20 +84,21 @@ h4 {
 }
 
 button {
-  background-color: black;
-  color: lightgreen;
-  border: 3pt dotted lightyellow;
+  background-image: radial-gradient(pink, blue, indigo, green, blue, blueviolet, green, blueviolet, indigo, blue, lightgreen);
+  color: yellow;
+  border: 8pt dotted yellow;
   font-weight: bolder;
   height: 400px;
   width: 250px;
   border-radius: 7px;
-  margin: 15px;
-  font-size: 16pt;
+  margin: 65px;
+  font-size: 18pt;
 }
 
 p {
-  margin: 2px;
-  font-size: 15pt;
+  margin: 15px;
+  font-size: 12pt;
+  font-weight: lighter;
   align-items: center;
 }
 
@@ -108,21 +116,15 @@ p {
   margin-right: 10%;
 }
 
-h2, .choose-buddy-text, .choose-game-view-text {
-  text-align: center;
-  font-weight: bold;
-  font-size: 130%;
-  margin-top: 100px;
-}
-
 img {
   height: 100px;
   width: 100px;
   margin: 18px;
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 5px;
-  border: dotted lightpink 2px;
+  border: dotted #39ff14 4px;
   border-radius: 6px;
+  background-image: url("./assets/starry.jpeg");
 }
 
 .hidden {
