@@ -28,6 +28,8 @@ class Game {
      startGame (gameVersionChosen){
        this.user.token = '';
        this.computer.token = '';
+      if(this.gameVersionChosen === ''){
        this.gameVersionChosen = gameVersionChosen;
      }
    }
+}

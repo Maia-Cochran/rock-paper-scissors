@@ -21,10 +21,6 @@ var spicyTitle2 = document.querySelector('.spicy-title2');
 var userScore = document.querySelector('.user-win-count');
 var compScore = document.querySelector('.computer-win-count');
 
-//global variables
-  var classicBuddies = ['rock', 'paper', 'scissors'];
-  var spicyBuddies = ['rock', 'paper', 'scissors', 'ufo', 'alien'];
-
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
@@ -41,11 +37,6 @@ function hide(elements){
 
 function show(elements){
   elements.classList.remove('hidden');
-}
-
-function getRandomItemFromArray(array) {
-  var randomArrayIndex = Math.floor(Math.random() * array.length);
-  return array[randomArrayIndex]
 }
 
 //functions for view changes
