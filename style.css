@@ -74,31 +74,6 @@ h4 {
   margin-right: 100px;
 }
 
-.game-choice-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5%;
-  margin: 10px;
-}
-
-button {
-  background-image: radial-gradient(pink, blue, indigo, green, blue, blueviolet, green, blueviolet, indigo, blue, lightgreen);
-  border: 4pt dotted yellow;
-  border-radius: 55%;
-  color: yellow;
-  font-size: 18pt;
-  font-weight: bolder;
-  height: 370px;
-  width: 400px;
-}
-
-p {
-  font-size: 12pt;
-  font-weight: lighter;
-  margin: 15px;
-}
-
 .buddies-container {
   display: flex;
   justify-content: space-around;
@@ -106,6 +81,31 @@ p {
   align-content: center;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.game-choice-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+  margin: 10px;
+}
+
+button {
+  background-image: radial-gradient(pink, blue, indigo, green, blue, blueviolet, green, blueviolet, indigo, blue, lightgreen);
+  border: 4pt dotted yellow;
+  border-radius: 20%;
+  color: yellow;
+  font-size: 18pt;
+  font-weight: bolder;
+  height: 470px;
+  width: 400px;
+}
+
+p {
+  font-size: 12pt;
+  font-weight: lighter;
+  margin: 15px;
 }
 
 img {
