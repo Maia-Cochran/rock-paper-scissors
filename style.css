@@ -9,7 +9,7 @@ body {
 .title {
   border: dotted #39ff14 10px;
   padding: 5px;
-    background-image: url("./assets/starry.jpeg");
+  background-image: url("./assets/starry.jpeg");
 }
 
 h1 {
@@ -115,7 +115,6 @@ p {
   margin-left: 10%;
   margin-right: 10%;
 }
-
 
 img {
   height: 100px;
