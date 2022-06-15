@@ -1,6 +1,6 @@
-# Rock Paper Scissors Final Solo Project
+# ✨ Rock Paper Scissors Final Solo Project ✨ 
 
-## ✨ Rock, Paper, Scissors (Alien, UFO) ✨
+## Rock, Paper, Scissors (Alien, UFO) 
 - Cohort 2205 Solo Project
 - Contributors: Maia Cochran
 
