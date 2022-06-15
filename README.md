@@ -26,8 +26,7 @@ Enjoy!
 
 ## Demo
 https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631-a93a-a8779a647c71.mov
-
-* Please note that this repository no longer aesthetically reflects the above demo (CSS altered).
+* Please note that CSS has been altered since the creation of the above demo.
 * However, the code written to provide the page's functionality, naming conventions, etc. remain the same.
 
 ## Possible Future Extensions
@@ -39,9 +38,8 @@ https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631
 
 ## Deployed Page
 - Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors-final-solo/).
-* Please note that the styling choices published to this repo are no longer reflected identically in the above demo nor the deployed link below. 
-* CSS of this repository will differ slightly from what is published above and below due to further tinkering.
-* Code written to provide the page's functionality, naming conventions, etc. remain the same.
+* Please note that CSS has been altered since the creation of the above deployed link.
+* However, the code written to provide the page's functionality, naming conventions, etc. remain the same.
 
 ### Sources
 - MDN
