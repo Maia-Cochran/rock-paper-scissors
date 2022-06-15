@@ -24,6 +24,9 @@ Enjoy!
 - After each turn, a message generates to alert the user who won and which tokens were chosen for both user and computer.
 - After a few seconds, the message disappears and a new message indicates that the game is ready for another round!
 
+## Demo
+https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631-a93a-a8779a647c71.mov
+
 ## Possible Future Extensions
 - Add a reset game button to the page when playing game
 - Show the winning icon when the game is played
@@ -31,9 +34,8 @@ Enjoy!
 - Make the game multiplayer between humans
 - Have a login page and allow user to have an account
 
-
 ## Deployed Page
-- Vist the webpage [here](https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631-a93a-a8779a647c71.mov).
+- Vist the webpage [here].
 
 ### Sources
 - MDN
