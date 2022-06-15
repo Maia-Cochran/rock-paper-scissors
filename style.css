@@ -9,6 +9,7 @@ body {
 .title {
   border: dotted #39ff14 10px;
   padding: 5px;
+    background-image: url("./assets/starry.jpeg");
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
 h2, .choose-buddy-text, .choose-game-view-text {
   text-align: center;
   margin-top: 100px;
-  font-size: 130%;
+  font-size: 150%;
   color: magenta;
 }
 
@@ -60,7 +61,7 @@ h4 {
 .user-win-count, .computer-win-count {
   text-align: center;
   margin-top: 2px;
-  color: darkgray;
+  color: magenta;
 }
 
 .columns {
@@ -90,7 +91,7 @@ button {
   height: 400px;
   width: 250px;
   border-radius: 7px;
-  margin: 75px;
+  margin: 65px;
   font-size: 18pt;
 }
 
@@ -120,10 +121,11 @@ img {
   height: 100px;
   width: 100px;
   margin: 18px;
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 5px;
   border: dotted #39ff14 4px;
   border-radius: 6px;
+  background-image: url("./assets/starry.jpeg");
 }
 
 .hidden {
