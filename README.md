@@ -23,13 +23,15 @@ Enjoy!
 - When the round does not result in a tie, the score of the winner will be logged in the appropriate side of the screen, according to who won the round.
 - After each turn, a message generates to alert the user who won and which tokens were chosen for both user and computer.
 - After a few seconds, the message disappears and a new message indicates that the game is ready for another round!
+- Scores for both players persist throughout game types.
+- Scores can be reset for the user and computer by clicking the 'reset score' button.
+- User can return to the home page to choose a new game version to play.
 
 ## Demo
 https://user-images.githubusercontent.com/101746747/173770329-ce024796-0df1-4d1c-a9dc-051fab5dad2e.mov
 
 ## Possible Future Extensions
 - Show the winning icon when the game is played
-- Save scores for each player to persist across game types
 - Make the game multiplayer between humans
 - Have a login page and allow user to have an account
 

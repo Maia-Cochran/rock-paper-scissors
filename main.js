@@ -21,6 +21,7 @@ var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
 var userScore = document.querySelector('.user-win-count');
 var compScore = document.querySelector('.computer-win-count');
+var resetScores = document.querySelector('.score-reset');
 
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
@@ -31,6 +32,7 @@ scissors.addEventListener('click', determineUserChoice);
 alien.addEventListener('click', determineUserChoice);
 ufo.addEventListener('click', determineUserChoice);
 goHomeButton.addEventListener('click', displayHome);
+resetScores.addEventListener('click', scoresAtZero);
 
 //helper functions
 function hide(elements){
@@ -142,6 +144,13 @@ function resetGame(){
 }
 
 function showScore(){
-  userScore.innerText = newGame.user.wins
-  compScore.innerText = newGame.computer.wins
+  userScore.innerText = newGame.user.wins;
+  compScore.innerText = newGame.computer.wins;
+}
+
+function scoresAtZero(){
+  newGame.user.wins = 0;
+  newGame.computer.wins = 0;
+  showScore();
+  resetGame();
 }

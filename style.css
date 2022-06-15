@@ -79,6 +79,7 @@ h4 {
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  margin-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -102,7 +103,12 @@ h4 {
   width: 400px;
 }
 
-.go-home {
+.reset-score-and-game-container {
+  display: flex;
+  gap: 20%;
+}
+
+.go-home, .score-reset {
   background-image: radial-gradient(black, blue, indigo, green, blue, blueviolet, green, blueviolet, indigo, blue, lightgreen);
   border: 4pt dotted yellow;
   border-radius: 20%;
@@ -110,7 +116,7 @@ h4 {
   font-size: 18pt;
   font-weight: bolder;
   height: 100px;
-  margin-top: 75px;
+  margin-top: 25px;
   width: 315px;
 }
 
