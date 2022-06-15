@@ -35,7 +35,7 @@ https://user-images.githubusercontent.com/101746747/173731700-3a6cb9fa-143d-4631
 - Have a login page and allow user to have an account
 
 ## Deployed Page
-- Vist the webpage [here].
+- Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors-final-solo/).
 
 ### Sources
 - MDN
