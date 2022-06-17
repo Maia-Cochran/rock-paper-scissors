@@ -49,6 +49,8 @@ function displayClassic(){
   hide(gameVersionText);
   hide(alien);
   hide(ufo);
+  hide(spicyTitle1);
+  hide(spicyTitle2);
   show(chooseBuddyView);
   show(chooseBuddyText);
   show(buddiesContainer);
@@ -85,6 +87,8 @@ function displaySpicy(){
 function displayHome(){
   show(gameVersionView);
   show(gameVersionText);
+  hide(spicyTitle1);
+  hide(spicyTitle2);
   hide(chooseBuddyView);
   hide(chooseBuddyText);
   hide(buddiesContainer);
@@ -117,21 +121,21 @@ function showWinner(){
 
     We both picked ${newGame.user.choice} as our buddy!
 
-    🤪 It's a tie 🤪`
+    🤪 It's a tie 🤪`;
     setTimeout(resetGame, 2900);
   } else if(newGame.user.winner === true){
     chooseBuddyText.innerText = `🎉 You win! 🎉
 
     Your ${newGame.user.choice} buddy beats my ${newGame.computer.choice}!
 
-    Well-played, my friend. 😎`
+    Well-played, my friend. 😎`;
     setTimeout(resetGame, 2900);
   } else if(newGame.computer.winner === true){
     chooseBuddyText.innerText = `Ah ha! I knew I could do it. 😏
 
     My buddy ${newGame.computer.choice} beats your ${newGame.user.choice}!
 
-    🥺 You lose! 🥺`
+    🥺 You lose! 🥺`;
     setTimeout(resetGame, 2900);
   }
 }
@@ -140,7 +144,7 @@ function resetGame(){
   newGame.startGame();
   newGame.user.winner = false;
   newGame.computer.winner = false;
-  chooseBuddyText.innerText = `Choose another buddy to keep playing!`
+  chooseBuddyText.innerText = `Choose another buddy to keep playing!`;
 }
 
 function showScore(){
