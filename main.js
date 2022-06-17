@@ -169,84 +169,84 @@ function scoresAtZero(){
   resetGame();
 }
 
-function displayWinningBuddy(){
-  if(newGame.user.choice === 'rock' && newGame.user.winner === true){
-    show(rock);
-    hide(columnRight);
-    hide(scissors);
-    hide(paper);
-    hide(alien);
-    hide(ufo);
-  } else if(newGame.user.choice === 'paper' && newGame.user.winner === true){
-      show(paper);
-      hide(columnRight);
-      hide(rock);
-      hide(scissors);
-      hide(alien);
-      hide(ufo);
-  } else if(newGame.user.choice === 'scissors' && newGame.user.winner === true){
-      show(scissors);
-      hide(columnRight);
-      hide(rock);
-      hide(paper);
-      hide(alien);
-      hide(ufo);
-  } else if(newGame.user.choice === 'alien' && newGame.user.winner === true){
-      show(alien);
-      hide(columnRight);
-      hide(rock);
-      hide(paper);
-      hide(scissors);
-      hide(ufo);
-  } else if(newGame.user.choice === 'ufo' && newGame.user.winner === true){
-      show(ufo);
-      hide(columnRight);
-      hide(rock);
-      hide(paper);
-      hide(scissors);
-      hide(alien);
-  } else if(newGame.computer.winner === true && newGame.computer.choice === 'rock') {
-      hide(alien);
-      hide(ufo);
-      show(rock);
-      hide(scissors);
-      hide(paper);
-      hide(columnLeft);
-  } else if(newGame.computer.winner === true && newGame.computer.choice === 'paper') {
-      hide(alien);
-      hide(ufo);
-      show(paper);
-      hide(scissors);
-      hide(rock);
-      hide(columnLeft);
-  } else if(newGame.computer.winner === true && newGame.computer.choice === 'scissors') {
-      show(scissors);
-      hide(alien);
-      hide(ufo);
-      hide(paper);
-      hide(rock);
-      hide(columnLeft);
-  } else if(newGame.computer.winner === true && newGame.computer.choice === 'alien') {
-      show(alien);
-      hide(ufo);
-      hide(scissors);
-      hide(paper);
-      hide(rock);
-      hide(columnLeft);
-    } else if(newGame.computer.winner === true && newGame.computer.choice === 'ufo') {
-      show(ufo);
-      hide(alien);
-      hide(scissors);
-      hide(paper);
-      hide(rock);
-      hide(columnLeft);
-    } else if(newGame.winner === 'tie') {
-      hide(ufo);
-      hide(alien);
-      hide(scissors);
-      hide(paper);
-      hide(rock);
-      hide(columnLeft);
-      hide(columnRight);
-  }
-}
+// function displayWinningBuddy(){
+//   if(newGame.user.choice === 'rock' && newGame.user.winner === true){
+//     show(rock);
+//     hide(columnRight);
+//     hide(scissors);
+//     hide(paper);
+//     hide(alien);
+//     hide(ufo);
+//   } else if(newGame.user.choice === 'paper' && newGame.user.winner === true){
+//       show(paper);
+//       hide(columnRight);
+//       hide(rock);
+//       hide(scissors);
+//       hide(alien);
+//       hide(ufo);
+//   } else if(newGame.user.choice === 'scissors' && newGame.user.winner === true){
+//       show(scissors);
+//       hide(columnRight);
+//       hide(rock);
+//       hide(paper);
+//       hide(alien);
+//       hide(ufo);
+//   } else if(newGame.user.choice === 'alien' && newGame.user.winner === true){
+//       show(alien);
+//       hide(columnRight);
+//       hide(rock);
+//       hide(paper);
+//       hide(scissors);
+//       hide(ufo);
+//   } else if(newGame.user.choice === 'ufo' && newGame.user.winner === true){
+//       show(ufo);
+//       hide(columnRight);
+//       hide(rock);
+//       hide(paper);
+//       hide(scissors);
+//       hide(alien);
+//   } else if(newGame.computer.winner === true && newGame.computer.choice === 'rock') {
+//       hide(alien);
+//       hide(ufo);
+//       show(rock);
+//       hide(scissors);
+//       hide(paper);
+//       hide(columnLeft);
+//   } else if(newGame.computer.winner === true && newGame.computer.choice === 'paper') {
+//       hide(alien);
+//       hide(ufo);
+//       show(paper);
+//       hide(scissors);
+//       hide(rock);
+//       hide(columnLeft);
+//   } else if(newGame.computer.winner === true && newGame.computer.choice === 'scissors') {
+//       show(scissors);
+//       hide(alien);
+//       hide(ufo);
+//       hide(paper);
+//       hide(rock);
+//       hide(columnLeft);
+//   } else if(newGame.computer.winner === true && newGame.computer.choice === 'alien') {
+//       show(alien);
+//       hide(ufo);
+//       hide(scissors);
+//       hide(paper);
+//       hide(rock);
+//       hide(columnLeft);
+//     } else if(newGame.computer.winner === true && newGame.computer.choice === 'ufo') {
+//       show(ufo);
+//       hide(alien);
+//       hide(scissors);
+//       hide(paper);
+//       hide(rock);
+//       hide(columnLeft);
+//     } else if(newGame.winner === 'tie') {
+//       hide(ufo);
+//       hide(alien);
+//       hide(scissors);
+//       hide(paper);
+//       hide(rock);
+//       hide(columnLeft);
+//       hide(columnRight);
+//   }
+// }
