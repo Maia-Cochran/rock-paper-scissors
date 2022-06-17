@@ -29,6 +29,7 @@ Enjoy!
 
 ## Demo
 https://user-images.githubusercontent.com/101746747/173922084-4530006e-42d8-4cb8-a444-3b99ee5af2c9.mov
+* Please note that the up-to-date version of this game has been altered slightly to reflect a better user experience on screen.
 
 ## Possible Future Extensions
 - Show the winning icon when the game is played
@@ -36,7 +37,7 @@ https://user-images.githubusercontent.com/101746747/173922084-4530006e-42d8-4cb8
 - Have a login page and allow user to have an account
 
 ## Deployed Page
-- Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors-final-solo/).
+- Vist the webpage [here](https://maia-cochran.github.io/rock-paper-scissors/).
 
 ### Sources
 - MDN
