@@ -8,10 +8,17 @@ var goHomeButton = document.querySelector('.go-home');
 var chooseBuddyView = document.querySelector('.choose-buddy-view');
 var chooseBuddyText = document.querySelector('.choose-buddy-text');
 var buddiesContainer = document.querySelector('.buddies-container')
+var alien = document.querySelector('.alien-buddy');
+var ufo = document.querySelector('.ufo-buddy');
+var rock = document.querySelector('.rock-buddy');
+var paper = document.querySelector('.paper-buddy');
+var scissors = document.querySelector('.scissors-buddy');
 var spicyDudeLeft = document.querySelector('.spicy-score-left');
 var spicyDudeRight = document.querySelector('.spicy-score-right');
 var classicDudeLeft = document.querySelector('.classic-score-left');
 var classicDudeRight = document.querySelector('.classic-score-right');
+var columnLeft = document.querySelector('.player-column-left');
+var columnRight = document.querySelector('.player-column-right');
 var spicyTitle1 = document.querySelector('.spicy-title1');
 var spicyTitle2 = document.querySelector('.spicy-title2');
 var userScore = document.querySelector('.user-win-count');
@@ -19,6 +26,7 @@ var compScore = document.querySelector('.computer-win-count');
 var resetScores = document.querySelector('.score-reset');
 var spicyBuds = document.querySelector('.spicy-buds');
 var classicBuds = document.querySelector('.classic-buds');
+// var itsATie = document.querySelector('./assets.tie')
 
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
@@ -49,22 +57,33 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  show(classicBuds);
+  show(scissors);
+  show(paper);
+  show(rock);
   show(userScore);
   show(compScore);
+  show(columnLeft);
+  show(columnRight);
   newGame.startGame('classic');
 }
 
 function displaySpicy(){
   hide(gameVersionView);
   hide(gameVersionText);
+  hide(classicDudeLeft);
+  hide(classicDudeRight);
   show(chooseBuddyView);
   show(chooseBuddyText);
   show(buddiesContainer);
   show(spicyDudeRight);
   show(spicyDudeLeft);
-  show(spicyBuds);
-  show(classicBuds);
+  show(columnLeft);
+  show(columnRight);
+  show(ufo);
+  show(alien);
+  show(scissors);
+  show(paper);
+  show(rock);
   show(spicyTitle1);
   show(spicyTitle2);
   show(userScore);
@@ -84,9 +103,10 @@ function displayHome(){
   hide(classicDudeRight);
   hide(spicyDudeRight);
   hide(spicyDudeLeft);
-  // hide(spicyBuds);
   hide(userScore);
   hide(compScore);
+  hide(columnLeft);
+  hide(columnRight);
   newGame.startGame();
 }
 
@@ -97,6 +117,7 @@ function determineUserChoice(){
   newGame.checkForWinner();
   showWinner();
   showScore();
+  displayWinningBuddy();
 }
 
 function showWinner(){
@@ -125,6 +146,11 @@ function showWinner(){
 }
 
 function resetGame(){
+  if(newGame.gameVersionChosen === 'classic'){
+    displayClassic();
+  } else if(newGame.gameVersionChosen === 'spicy'){
+    displaySpicy();
+  }
   newGame.startGame();
   newGame.user.winner = false;
   newGame.computer.winner = false;
@@ -141,4 +167,86 @@ function scoresAtZero(){
   newGame.computer.wins = 0;
   showScore();
   resetGame();
+}
+
+function displayWinningBuddy(){
+  if(newGame.user.choice === 'rock' && newGame.user.winner === true){
+    show(rock);
+    hide(columnRight);
+    hide(scissors);
+    hide(paper);
+    hide(alien);
+    hide(ufo);
+  } else if(newGame.user.choice === 'paper' && newGame.user.winner === true){
+      show(paper);
+      hide(columnRight);
+      hide(rock);
+      hide(scissors);
+      hide(alien);
+      hide(ufo);
+  } else if(newGame.user.choice === 'scissors' && newGame.user.winner === true){
+      show(scissors);
+      hide(columnRight);
+      hide(rock);
+      hide(paper);
+      hide(alien);
+      hide(ufo);
+  } else if(newGame.user.choice === 'alien' && newGame.user.winner === true){
+      show(alien);
+      hide(columnRight);
+      hide(rock);
+      hide(paper);
+      hide(scissors);
+      hide(ufo);
+  } else if(newGame.user.choice === 'ufo' && newGame.user.winner === true){
+      show(ufo);
+      hide(columnRight);
+      hide(rock);
+      hide(paper);
+      hide(scissors);
+      hide(alien);
+  } else if(newGame.computer.winner === true && newGame.computer.choice === 'rock') {
+      hide(alien);
+      hide(ufo);
+      show(rock);
+      hide(scissors);
+      hide(paper);
+      hide(columnLeft);
+  } else if(newGame.computer.winner === true && newGame.computer.choice === 'paper') {
+      hide(alien);
+      hide(ufo);
+      show(paper);
+      hide(scissors);
+      hide(rock);
+      hide(columnLeft);
+  } else if(newGame.computer.winner === true && newGame.computer.choice === 'scissors') {
+      show(scissors);
+      hide(alien);
+      hide(ufo);
+      hide(paper);
+      hide(rock);
+      hide(columnLeft);
+  } else if(newGame.computer.winner === true && newGame.computer.choice === 'alien') {
+      show(alien);
+      hide(ufo);
+      hide(scissors);
+      hide(paper);
+      hide(rock);
+      hide(columnLeft);
+    } else if(newGame.computer.winner === true && newGame.computer.choice === 'ufo') {
+      show(ufo);
+      hide(alien);
+      hide(scissors);
+      hide(paper);
+      hide(rock);
+      hide(columnLeft);
+    } else if(newGame.winner === 'tie') {
+      hide(ufo);
+      hide(alien);
+      hide(scissors);
+      hide(paper);
+      hide(rock);
+      hide(columnLeft);
+      hide(columnRight);
+  }
 }
