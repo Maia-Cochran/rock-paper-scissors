@@ -9,10 +9,6 @@ var chooseBuddyView = document.querySelector('.choose-buddy-view');
 var chooseBuddyText = document.querySelector('.choose-buddy-text');
 var buddiesContainer = document.querySelector('.buddies-container')
 var alien = document.querySelector('.alien-buddy');
-var ufo = document.querySelector('.ufo-buddy');
-var rock = document.querySelector('.rock-buddy');
-var paper = document.querySelector('.paper-buddy');
-var scissors = document.querySelector('.scissors-buddy');
 var spicyDudeLeft = document.querySelector('.spicy-score-left');
 var spicyDudeRight = document.querySelector('.spicy-score-right');
 var classicDudeLeft = document.querySelector('.classic-score-left');
@@ -22,15 +18,14 @@ var spicyTitle2 = document.querySelector('.spicy-title2');
 var userScore = document.querySelector('.user-win-count');
 var compScore = document.querySelector('.computer-win-count');
 var resetScores = document.querySelector('.score-reset');
+var spicyBuds = document.querySelector('.spicy-buds');
+var classicBuds = document.querySelector('.classic-buds');
 
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
 spicyGame.addEventListener('click', displaySpicy);
-rock.addEventListener('click', determineUserChoice);
-paper.addEventListener('click', determineUserChoice);
-scissors.addEventListener('click', determineUserChoice);
-alien.addEventListener('click', determineUserChoice);
-ufo.addEventListener('click', determineUserChoice);
+spicyBuds.addEventListener('click', determineUserChoice);
+classicBuds.addEventListener('click', determineUserChoice);
 goHomeButton.addEventListener('click', displayHome);
 resetScores.addEventListener('click', scoresAtZero);
 
@@ -47,8 +42,7 @@ function show(elements){
 function displayClassic(){
   hide(gameVersionView);
   hide(gameVersionText);
-  hide(alien);
-  hide(ufo);
+  hide(spicyBuds);
   hide(spicyTitle1);
   hide(spicyTitle2);
   show(chooseBuddyView);
@@ -56,9 +50,7 @@ function displayClassic(){
   show(buddiesContainer);
   show(classicDudeLeft);
   show(classicDudeRight);
-  show(scissors);
-  show(paper);
-  show(rock);
+  show(classicBuds);
   show(userScore);
   show(compScore);
   newGame.startGame('classic');
@@ -72,11 +64,8 @@ function displaySpicy(){
   show(buddiesContainer);
   show(spicyDudeRight);
   show(spicyDudeLeft);
-  show(alien);
-  show(ufo);
-  show(scissors);
-  show(paper);
-  show(rock);
+  show(spicyBuds);
+  show(classicBuds);
   show(spicyTitle1);
   show(spicyTitle2);
   show(userScore);
@@ -96,11 +85,7 @@ function displayHome(){
   hide(classicDudeRight);
   hide(spicyDudeRight);
   hide(spicyDudeLeft);
-  hide(alien);
-  hide(ufo);
-  hide(scissors);
-  hide(paper);
-  hide(rock);
+  // hide(spicyBuds);
   hide(userScore);
   hide(compScore);
   newGame.startGame();

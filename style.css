@@ -87,10 +87,9 @@ h4 {
 
 .game-choice-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 20%;
-  margin: 10px;
 }
 
 .game-spicy, .game-classic {
@@ -124,13 +123,14 @@ h4 {
 .choose-buddy-view {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .spicy-buds, .classic-buds {
   display: flex;
   flex-direction: row;
+  margin: 10px;
 }
 
 p {
