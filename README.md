@@ -26,6 +26,7 @@ Enjoy!
 - Scores for both players persist throughout game types.
 - Scores can be reset for the user and computer by clicking the 'reset score' button.
 - User can return to the home page to choose a new game version to play.
+- Available for mobile or desktop play!
 
 ## Demo
 https://user-images.githubusercontent.com/101746747/173922084-4530006e-42d8-4cb8-a444-3b99ee5af2c9.mov
