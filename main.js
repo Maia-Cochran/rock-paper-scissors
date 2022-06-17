@@ -8,7 +8,6 @@ var goHomeButton = document.querySelector('.go-home');
 var chooseBuddyView = document.querySelector('.choose-buddy-view');
 var chooseBuddyText = document.querySelector('.choose-buddy-text');
 var buddiesContainer = document.querySelector('.buddies-container')
-var alien = document.querySelector('.alien-buddy');
 var spicyDudeLeft = document.querySelector('.spicy-score-left');
 var spicyDudeRight = document.querySelector('.spicy-score-right');
 var classicDudeLeft = document.querySelector('.classic-score-left');
