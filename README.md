@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/101746747/173922084-4530006e-42d8-4cb8
 * Please note that the up-to-date version of this game has been altered slightly to reflect a better user experience on screen.
 
 ## Possible Future Extensions
-- ~~ Show the winning icon when the game is played ~~
+- ~~Show the winning icon when the game is played
 - Make the game multiplayer between humans
 - Have a login page and allow user to have an account
 
