@@ -1,7 +1,7 @@
 //querySelectors
 var newGame = new Game();
 var classicGame = document.querySelector('.game-classic');
-var spicyGame= document.querySelector('.game-spicy');
+var spicyGame = document.querySelector('.game-spicy');
 var gameVersionView = document.querySelector('.game-choice-container');
 var gameVersionText = document.querySelector('.choose-game-view');
 var goHomeButton = document.querySelector('.go-home');
@@ -26,7 +26,7 @@ var compScore = document.querySelector('.computer-win-count');
 var resetScores = document.querySelector('.score-reset');
 var spicyBuds = document.querySelector('.spicy-buds');
 var classicBuds = document.querySelector('.classic-buds');
-// var itsATie = document.querySelector('./assets.tie')
+
 
 //eventListeners
 classicGame.addEventListener('click', displayClassic);
@@ -49,7 +49,10 @@ function show(elements){
 function displayClassic(){
   hide(gameVersionView);
   hide(gameVersionText);
-  hide(spicyBuds);
+  hide(ufo);
+  hide(alien);
+  hide(spicyDudeLeft);
+  hide(spicyDudeRight);
   hide(spicyTitle1);
   hide(spicyTitle2);
   show(chooseBuddyView);
@@ -117,7 +120,6 @@ function determineUserChoice(){
   newGame.checkForWinner();
   showWinner();
   showScore();
-  displayWinningBuddy();
 }
 
 function showWinner(){
@@ -127,30 +129,25 @@ function showWinner(){
     We both picked ${newGame.user.choice} as our buddy!
 
     🤪 It's a tie 🤪`;
-    setTimeout(resetGame, 2900);
+    setTimeout(resetGame, 2800);
   } else if(newGame.user.winner === true){
     chooseBuddyText.innerText = `🎉 You win! 🎉
 
     Your ${newGame.user.choice} buddy beats my ${newGame.computer.choice}!
 
     Well-played, my friend. 😎`;
-    setTimeout(resetGame, 2900);
+    setTimeout(resetGame, 2800);
   } else if(newGame.computer.winner === true){
     chooseBuddyText.innerText = `Ah ha! I knew I could do it. 😏
 
     My buddy ${newGame.computer.choice} beats your ${newGame.user.choice}!
 
     🥺 You lose! 🥺`;
-    setTimeout(resetGame, 2900);
+    setTimeout(resetGame, 2800);
   }
 }
 
 function resetGame(){
-  if(newGame.gameVersionChosen === 'classic'){
-    displayClassic();
-  } else if(newGame.gameVersionChosen === 'spicy'){
-    displaySpicy();
-  }
   newGame.startGame();
   newGame.user.winner = false;
   newGame.computer.winner = false;
@@ -169,6 +166,8 @@ function scoresAtZero(){
   resetGame();
 }
 
+
+//
 // function displayWinningBuddy(){
 //   if(newGame.user.choice === 'rock' && newGame.user.winner === true){
 //     show(rock);
